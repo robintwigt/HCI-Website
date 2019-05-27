@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+	box-sizing: border-box;
+	background-color: #232323;
+	color: white;
+}
+
+p.titel {
+  font-family: 'Staatliches', cursive;
+  font-size: 30px;
+  color: #fff7a0;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 30px;
+  margin-bottom: 2px;
+}
+
+p.ondertitel {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+p.bronnen {
+  font-size: 8px;
+}
+
+p.hr {
+  color: #fff7a0;
+}
+
+div.center {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+picture.foto {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  z-index: 50;
+  height: 300px;
+  overflow: hidden;
+}
+
+.foto img {
+  width: 100%;
+  margin: 0;
+}
+
+div .plaatje {
+  box-align: center;
+}
+
+.plaatje img {
+  height: 200px;
+  margin: 0;
+}
+
+main {
+  position: absolute;
+  left: 0;
+  top: 350px;
+}
+
+video {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.lijn {
+  height: 2px;
+  width: 100%;
+  background-color: #fff7a0;
+}
+
+.geelvak p {
+  background-color: #fff7a0;
+  color: #232323;
+  padding: 10px;
+}
+
+.blauwvak p {
+  background-color: #ccdeff;
+  color: #232323;
+  padding: 10px;
+}
+
+.tab {
+  margin-left: 1em;
+}
+
+.tab2 {
+  margin-left: 2em;
+}
+
+.tab3 {
+  margin-left: 3em;
+}
+
+.blauw {
+  color: #75b5d1;
+}
+
+.groen {
+  color: #4e9650;
+}
+
+.rood {
+  color: #ce4f21;
+}
+
+.grijs {
+  color: #a0a0a0;
+}
+
+
+
+/*Dit is de menu balk*/
+
+div.nav {
+  font-family: 'Lato:400', sans-serif;
+  font-size: 17px;
+}
+
+div.menubalk {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  background-color: #fff7a0;
+  text-align: center;
+  z-index: 80;
+}
+
+div.menulijn {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: #232323;
+  top: 49px;
+  text-align: center;
+  z-index: 100;
+}
+
+header {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: transparent;
+  text-align: center;
+  z-index: 100;
+}
+
+img.logo {
+  height: 70px;
+  margin-top: 7px;
+}
+
+/*FUNCTIONEEL*/
+.multi-level, .item ul, .nav input[type="checkbox"] {
+  display: none; /*dit zorgt ervoor dat de menu items niet zichtbaar zijn*/
+}
+
+#menu:checked ~ .multi-level, .item input:checked ~ ul {
+  display: block; /*dit zorgt ervoor dat de menu items zichtbaar worden als je klikt op het menu of op een kopje*/
+}
+
+/*PIJLTJE*/
+
+.arrow {
+  width: 12px;
+  height: 8px;
+  vertical-align: middle;
+  float: left;
+  z-index: 0;
+  margin-left: 88px;
+  margin-top: -27px;
+}
+
+.arrow2 {
+  margin-left: 125px;
+}
+
+.item input + .arrow {
+  transform: rotate(-90deg);
+  transition: 0.1s;
+}
+
+.item input:checked + .arrow {
+  transform: rotate(0deg);
+  transition: 0.1s;
+}
+
+/*STYLES*/
+
+label:hover {
+  cursor: pointer;
+}
+
+label {
+  width: 100%;
+  display: block;
+  z-index: 3;
+  position: relative;
+}
+
+.nav {
+  width: 250px;
+  background-color: #fff591;
+  overflow-x: hidden;
+  /*border-bottom: 1px solid #156cef;*/
+  margin: 0;
+  padding: 0;
+  z-index: 90;
+}
+
+#nav-icon {
+  font-size: 28px;
+  line-height: 50px;
+  padding-left: 1em;
+  color: white;
+  background-color: #232323;
+}
+
+.nav ul, .nav li, label {
+  line-height: 50px;
+  margin: 0;
+  padding: 0 2em;
+  list-style: none;
+  text-decoration: none;
+  color: #232323;
+  font-weight: 100;
+  width: 100%;
+}
+
+.item ul {
+  padding: 0 1.5em;
+}
+
+.nav li a {
+  line-height: 50px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #232323;
+  font-weight: 100;
+}
+
+ul.geenuitklap {
+  line-height: 50px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 100;
+}
+
+.geenuitklap a {
+  text-decoration: none;
+  color: #90A4AE;
+}
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+.menu {
+  grid-area: menu;
+}
+
+/*.foto {
+  grid-area: foto;
+}
+
+.intro {
+  grid-area: intro;
+}*/
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/*De code hieronder zorgt ervoor dat de website responsible is*/
+
+@media only screen and (min-width: 0px) and (max-width: 499px){
+  body{
+    display: grid;
+    grid-template-columns: 100%;
+
+    grid-template-areas: 
+          "menu"
+  }
+
+  header {
+    text-align: right;
+  }
+
+  img.logo {
+    height: 50px;
+    margin-top: 13px;
+  }
+
+  main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 799px){
+  body{
+    display: grid;
+    grid-template-columns: 100%;
+
+    grid-template-areas: 
+          "menu"
+  }
+
+  img.logo {
+    height: 60px;
+    margin-top: 10px;
+  }
+
+  main {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1199px){
+  body{
+    display: grid;
+    grid-template-columns: 100%;
+
+    grid-template-areas: 
+          "menu"
+  }
+
+  main {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  body{
+    display: grid;
+    grid-template-columns: 100%;
+
+    grid-template-areas:
+          "menu" 
+  }
+
+  main {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}

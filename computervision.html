@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<title>HCI-Website</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Asap+Condensed" rel="stylesheet" />
+		<link type="text/css" href="styles/main.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="menubalk"></div>
+		<div class="menulijn"></div>
+
+		<header>
+			<img class="logo" src="img/hcilogo.png" />
+		</header>
+		
+		<div class="grid-item menu nav">
+			<input type="checkbox" id="menu" />
+			<label for="menu">&#9776;</label>
+
+			<div class="multi-level">
+				<ul class="geenuitklap">
+					<li><a href="index.html">Home</a></li>
+				</ul>
+
+				<div class="item">
+					<input type="checkbox" id="A" />
+					<label for="A">Topics</label>
+					<img src="img/pijltje.png" class="arrow">
+
+					<ul>
+						<li><a href="wearables.html">Wearables</a></li>
+						<li><a href="playfulinteractions.html">Playful Interactions</a></li>
+						<li><a href="artificialcreatures.html">Artificial Creatures</a></li>
+						<li><a href="ar&vr.html">AR & VR</a></li>
+					</ul>
+				</div>
+
+				<div class="item">
+					<input type="checkbox" id="B" />
+					<label for="B">Workshops</label>
+					<img src="img/pijltje.png" class="arrow arrow2">
+
+					<ul>
+						<li><a href="arduino.html">Arduino</a></li>
+						<li><a href="vrenvironments.html">VR Environments</a></li>
+						<li><a href="computervision.html">Computer Vision</a></li>
+					</ul>
+				</div>
+
+				<ul class="geenuitklap">
+					<li><a href="excursion.html">Excursion</a></li>
+				</ul>
+				<ul class="geenuitklap">
+					<li><a href="labweeks.html">Lab Weeks</a></li>
+				</ul> 
+			</div>
+	  	</div>
+
+	  	<picture class="grid-item foto">
+			<source media="(max-width: 499px)" srcset="img/index_4.jpg">
+			<source media="(min-width: 500px) and (max-width: 799px)" srcset="img/index_3.jpg">
+			<source media="(min-width: 800px) and (max-width: 1199px)" srcset="img/index_2.jpg">
+			<source media="(min-width: 1200px)" srcset="img/index_1.jpg">
+			<img src="img/index_3.jpg" alt="Achtergrond foto">
+		</picture>
+
+	  	<main class="content">
+	  		<div class="intro">
+		  		<p class="titel">Workshop</p>
+		  		<p class="ondertitel">Computer Vision</p>
+		  		<p>
+		  			Tijdens deze workshop hebben we weer gewerkt met het programma 'Processing'. Deze keer moesten we ook werken met de webcam.
+		  		</p>
+		  	</div>
+
+		  	<div class="lijn"></div>
+
+		  	<div>
+		  		<p>
+		  			<b>Assignment 1</b>
+		  			<br />
+		  			Bij deze opdracht moest ik 3 verschillende cirkels tekenen met het programma 'Processing'. Ze moesten allemaal verschillende grootten en locaties hebben.
+		  		</p>
+		  	</div>
+
+		  	<div class="geelvak">
+		  		<p>
+		  			void setup() {<br />
+
+					  <span class="tab" />size(200,200);<br />
+
+					  <span class="tab" />ellipseMode(CORNER);<br />
+
+					  <span class="tab" />stroke(0,0,0);<br />
+
+					  <span class="tab" />//noStroke();<br />
+
+					  <span class="tab" />fill(0,255,0);<br />
+
+					  <span class="tab" />ellipse(10, 10, 150, 150);<br />
+
+					  <br />
+					  
+					  <span class="tab" />ellipseMode(CORNER);<br />
+
+					  <span class="tab" />stroke(0,0,0);<br />
+
+					  <span class="tab" />//noStroke();<br />
+
+					  <span class="tab" />fill(255,0,0);<br />
+
+					  <span class="tab" />ellipse(50, 50, 100, 100);<br />
+
+					  <br />
+					  
+					  <span class="tab" />ellipseMode(CORNER);<br />
+
+					  <span class="tab" />stroke(0,0,0);<br />
+
+					  <span class="tab" />//noStroke();<br />
+
+					  <span class="tab" />fill(0,0,255);<br />
+
+					  <span class="tab" />ellipse(120, 90, 50, 50);<br />
+
+					}<br />
+
+					<br />
+
+					void draw() {<br />
+
+					}
+				</p>
+		  	</div>
+
+		  	<div class="center">
+			  	<picture class="plaatje">
+			  		<source media="(min-width: 0px)" srcset="img/assignment1.jpg">
+					<img src="img/assignment1.jpg" alt="Achtergrond foto">
+			  	</picture>
+		  	</div>
+
+		  	<div class="lijn"></div>
+
+		  	<div>
+		  		<p>
+		  			<b>Andere Assignments</b>
+		  			<br />
+		  			Hieronder is beeldmateriaal te zien van de andere assignments.
+		  		</p>
+		  	</div>
+
+		  	<div class="center">
+			  	<picture class="plaatje">
+			  		<source media="(min-width: 0px)" srcset="img/assignment2.jpg">
+					<img src="img/assignment2.jpg" alt="Achtergrond foto">
+			  	</picture>
+		  	</div>
+
+		  	<video width="320" height="240" controls>
+			  <source src="vid/assignment3.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+			</video>
+
+			<div class="center">
+			  	<picture class="plaatje">
+			  		<source media="(min-width: 0px)" srcset="img/assignmentar.jpg">
+					<img src="img/assignmentar.jpg" alt="Achtergrond foto">
+			  	</picture>
+		  	</div>
+	  	</main>
+	</body>
+</html>
