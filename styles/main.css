@@ -54,6 +54,11 @@ div.center {
   margin-bottom: 15px;
 }
 
+div.right {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
 picture.foto {
   position: absolute;
   left: 0;
@@ -134,6 +139,14 @@ video {
 .grijs {
   color: #a0a0a0;
 }
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------*/
+
+
 
 
 
