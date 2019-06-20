@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<title>HCI-Website</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Asap+Condensed" rel="stylesheet" />
+		<link type="text/css" href="styles/main.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="menubalk"></div>
+		<div class="menulijn"></div>
+
+		<header>
+			<img class="logo" src="img/hcilogo.png" />
+		</header>
+		
+		<div class="grid-item menu nav">
+			<input type="checkbox" id="menu" />
+			<label for="menu">&#9776;</label>
+
+			<div class="multi-level">
+				<ul class="geenuitklap">
+					<li><a href="index.html">Home</a></li>
+				</ul>
+
+				<div class="item">
+					<input type="checkbox" id="A" />
+					<label for="A">Topics</label>
+					<img src="img/pijltje.png" class="arrow">
+
+					<ul>
+						<li><a href="wearables.html">Wearables</a></li>
+						<li><a href="playfulinteractions.html">Playful Interactions</a></li>
+						<li><a href="artificialcreatures.html">Artificial Creatures</a></li>
+						<li><a href="ar&vr.html">AR & VR</a></li>
+					</ul>
+				</div>
+
+				<div class="item">
+					<input type="checkbox" id="B" />
+					<label for="B">Workshops</label>
+					<img src="img/pijltje.png" class="arrow arrow2">
+
+					<ul>
+						<li><a href="arduino.html">Arduino</a></li>
+						<li><a href="vrenvironments.html">VR Environments</a></li>
+						<li><a href="computervision.html">Computer Vision</a></li>
+					</ul>
+				</div>
+
+				<ul class="geenuitklap">
+					<li><a href="excursion.html">Excursion</a></li>
+				</ul>
+				<ul class="geenuitklap">
+					<li><a href="labweeks.html">Lab Weeks</a></li>
+				</ul> 
+			</div>
+	  	</div>
+
+	  	<picture class="grid-item foto">
+			<source media="(max-width: 499px)" srcset="img/index_4.jpg">
+			<source media="(min-width: 500px) and (max-width: 799px)" srcset="img/index_3.jpg">
+			<source media="(min-width: 800px) and (max-width: 1199px)" srcset="img/index_2.jpg">
+			<source media="(min-width: 1200px)" srcset="img/index_1.jpg">
+			<img src="img/index_3.jpg" alt="Achtergrond foto">
+		</picture>
+
+		<div class="website">
+		  	<main class="content">
+		  		<div class="intro">
+			  		<p class="titel">Dag 2 - dinsdag 4 juni</p>
+			  		<p>
+			  			We zijn de dag begonnen met het testen van verschillende sensoren met Arduino. We hebben een aantal van de sensoren verdeeld over onze groepsleden. Ik ben gaan werken met de temperatuursensor. Er waren 3 verschillende temperatuursensoren: ‘Temp’, ‘Analog temp’ en ‘Digital temp’.
+			  			<br />
+			  			<br />
+						Bij alle 3 de sensoren kreeg ik wel waarden te zien, alleen was het niet de waarde die ik wilde. De waarde die ik wilde was namelijk graden celsius. Ik kon er niet achter komen welke waarden de sensoren gaven. Ik dacht eerst aan Fahrenheit, alleen toen ik dit omrekende in Arduino kwamen er getallen uit die ook niet helemaal leken te kloppen. Het zou dan namelijk 26 graden zijn en dat was het niet op dat moment. Dit kan echter ook liggen aan de nauwkeurigheid van de sensor. 
+						<br />
+			  			<br />
+						Om half 1 begon de presentatie van Vincent. Lindeboom.
+						<br />
+			  			<br />
+						Presentatie:
+						Vincent Lindeboom
+						Next Empire
+						www.nextempire.net
+						www.radioradio.com
+						An experimental product/ experience studio
+						Vincent is van het bedrijf radio radio.
+						Hij legde een aantal van zijn projecten uit. Bijvoorbeeld:
+						‘Moord in artis’. Dit is een project dat ging om audio. Zag er erg leuk uit, vooral de trailer maakt me erg nieuwsgierig. Dit is iets waarvoor ik naar Artis zou gaan.
+						‘Stranger things II’. Is vooral erg leuk als je de serie kent, want dan herken je onderdelen. 
+						<br />
+			  			<br />
+						Na de presentatie zijn we met de hele groep nog even gaan brainstormen over het concept. We hebben besloten om het een beetje aan te passen. Bij het concept is het nu de bedoeling dat 2 mensen met elkaar gaan samenwerken door middel van een spel. Persoon 1 gaat lopen door een doolhof met een blinddoek om en 2 sensoren, 1 sensor op de linkerhand en 1 sensor op de rechterhand. Als de tweede persoon op een button klikt met een linkerpijl, dan gaat de sensor op de linkerhand trillen. Als de persoon op een button klikt met een rechterpijl, dan gaat de sensor sensor op de rechterhand trillen. Hiermee kan persoon 2 persoon 1 begeleiden door het doolhof.
+						<br />
+			  			<br />
+						Het concept hadden we helemaal uitgedacht. Daarom heb ik een snelle schets gemaakt van het concept. Hierdoor is het concept duidelijk gevisualiseerd en zullen er geen onduidelijkheden zijn over het concept .
+						<br />
+			  			<br />
+						Voor ons concept hebben we een sensor nodig die kan trillen. Deze sensor was echter niet aanwezig, dus moesten we nog bestellen. We konden vandaag dus nog niet experimenteren met deze sensor. De code die we nodig gaan hebben kan wel alvast geschreven worden, alleen dan met een andere sensor in plaats van de sensor die kan trillen.
+						<br />
+			  			<br />
+						Ik heb een code geschreven in Arduino die werkt met 2 buttons en 2 LEDs. Als je de linkerbutton indrukt gaat de linker LED aan en als je de rechterbutton indrukt gaat de rechter LED aan. Deze code kunnen we later gaan toepassen bij de tril sensor. Dat gaat namelijk op dezelfde manier werken: als de linkerbutton ingedrukt wordt, gaat de linker sensor trillen en andersom. De code die ik heb geschreven is hieronder te lezen en het resultaat daarvan is daaronder te zien.
+
+			  		</p>
+			  	</div>
+		  	</main>
+		  	
+			<footer class="centreer">
+			  	<div class="lijnfooter"></div>
+			  	<p>
+			  		&copy; 2019 ROBIN TWIGT
+			  	</p>
+			</footer>
+		</div>
+	</body>
+</html>

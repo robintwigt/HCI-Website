@@ -64,694 +64,701 @@
 			<img src="img/arduino.jpg" alt="Achtergrond foto">
 		</picture>
 
-	  	<main class="content">
-	  		<div class="intro">
-		  		<p class="titel">Workshop</p>
-		  		<p class="ondertitel">Arduino</p>
-		  		<p>
-		  			Arduino is een open-source elektronica-platform. Met een Arduino kun je prototypen bouwen en interactieve objecten of omgevingen creëren. Arduino kan gebruikt worden zonder een computer, maar kan ook communiceren met een software die op een computer draait. Met de Arduino-microcontroller kan de input van sensoren ontvangen worden en kan er output naar actoren verzonden worden.
-		  		</p>
-		  	</div>
+		<div class="website">
+		  	<main class="content">
+		  		<div class="intro">
+			  		<p class="titel">Workshop</p>
+			  		<p class="ondertitel">Arduino</p>
+			  		<p>
+			  			Arduino is een open-source elektronica-platform. Met een Arduino kun je prototypen bouwen en interactieve objecten of omgevingen creëren. Arduino kan gebruikt worden zonder een computer, maar kan ook communiceren met een software die op een computer draait. Met de Arduino-microcontroller kan de input van sensoren ontvangen worden en kan er output naar actoren verzonden worden.
+			  		</p>
+			  	</div>
 
-		  	<div class="lijn"></div>
+			  	<div class="lijn"></div>
 
-		  	<div>
-		  		<p>
-		  			<b>Exercise 3C</b>
-		  			<br />
-		  			Bij deze opdracht moest ik er voor zorgen dat het ene lampje 2 keer sneller knippert dan het andere lampje.
-		  	</div>
+			  	<div>
+			  		<p>
+			  			<b>Exercise 3C</b>
+			  			<br />
+			  			Bij deze opdracht moest ik er voor zorgen dat het ene lampje 2 keer sneller knippert dan het andere lampje.
+			  	</div>
 
-		  	<div class="geelvak">
-		  		<p>
-		  			<span class="grijs">// the setup function runs once when you press reset or power the board</span><br />
+			  	<div class="geelvak">
+			  		<p>
+			  			<span class="grijs">// the setup function runs once when you press reset or power the board</span><br />
 
-					<span class="blauw">void</span> <span class="groen">setup</span>() {<br />
+						<span class="blauw">void</span> <span class="groen">setup</span>() {<br />
 
-					  <span class="grijs">// initialize digital pin LED_BUILTIN as an output.</span><br />
+						  <span class="grijs">// initialize digital pin LED_BUILTIN as an output.</span><br />
 
-					  <span class="tab" /><span class="rood">pinMode</span>(13, <span class="blauw">OUTPUT</span>);<br />
+						  <span class="tab" /><span class="rood">pinMode</span>(13, <span class="blauw">OUTPUT</span>);<br />
 
-					  <span class="tab"><span class="rood">pinMode</span>(12, <span class="blauw">OUTPUT</span>);<br />
+						  <span class="tab"><span class="rood">pinMode</span>(12, <span class="blauw">OUTPUT</span>);<br />
 
-					}<br />
+						}<br />
 
-					<br />
+						<br />
 
-					<span class="grijs">// the loop function runs over and over again forever</span><br />
+						<span class="grijs">// the loop function runs over and over again forever</span><br />
 
-					<span class="blauw">void</span> <span class="groen">loop</span>() {<br />
+						<span class="blauw">void</span> <span class="groen">loop</span>() {<br />
 
-					  <span class="tab" /><span class="rood">digitalWrite</span>(13, <span class="blauw">HIGH</span>);   <span class="grijs">// turn the LED on (HIGH is the voltage level)</span><br />
+						  <span class="tab" /><span class="rood">digitalWrite</span>(13, <span class="blauw">HIGH</span>);   <span class="grijs">// turn the LED on (HIGH is the voltage level)</span><br />
 
-					  <span class="tab" /><span class="rood">delay</span>(0);                       <span class="grijs">// wait for a second</span><br />
+						  <span class="tab" /><span class="rood">delay</span>(0);                       <span class="grijs">// wait for a second</span><br />
 
-					  <span class="tab" /><span class="rood">digitalWrite</span>(12, <span class="blauw">LOW</span>);   <span class="grijs">// turn the LED on (HIGH is the voltage level)</span><br />
+						  <span class="tab" /><span class="rood">digitalWrite</span>(12, <span class="blauw">LOW</span>);   <span class="grijs">// turn the LED on (HIGH is the voltage level)</span><br />
 
-					  <span class="tab" /><span class="rood">delay</span>(500);                       <span class="grijs">// wait for a second</span><br />
+						  <span class="tab" /><span class="rood">delay</span>(500);                       <span class="grijs">// wait for a second</span><br />
 
-					  <span class="tab" /><span class="rood">digitalWrite</span>(13, <span class="blauw">LOW</span>);    <span class="grijs">// turn the LED off by making the voltage LOW</span><br />
+						  <span class="tab" /><span class="rood">digitalWrite</span>(13, <span class="blauw">LOW</span>);    <span class="grijs">// turn the LED off by making the voltage LOW</span><br />
 
-					  <span class="tab" /><span class="rood">delay</span>(500);                       <span class="grijs">// wait for a second</span><br />
+						  <span class="tab" /><span class="rood">delay</span>(500);                       <span class="grijs">// wait for a second</span><br />
 
-					  <span class="tab" /><span class="rood">digitalWrite</span>(12, <span class="blauw">HIGH</span>);    <span class="grijs">// turn the LED off by making the voltage LOW</span><br />
+						  <span class="tab" /><span class="rood">digitalWrite</span>(12, <span class="blauw">HIGH</span>);    <span class="grijs">// turn the LED off by making the voltage LOW</span><br />
 
-					  <span class="tab" /><span class="rood">delay</span>(0);                       <span class="grijs">// wait for a second</span><br />
+						  <span class="tab" /><span class="rood">delay</span>(0);                       <span class="grijs">// wait for a second</span><br />
 
-					  <span class="tab" /><span class="rood">digitalWrite</span>(13, <span class="blauw">HIGH</span>);    <span class="grijs">// turn the LED off by making the voltage LOW</span><br />
+						  <span class="tab" /><span class="rood">digitalWrite</span>(13, <span class="blauw">HIGH</span>);    <span class="grijs">// turn the LED off by making the voltage LOW</span><br />
 
-					  <span class="tab" /><span class="rood">delay</span>(500);                       <span class="grijs">// wait for a second</span><br />
+						  <span class="tab" /><span class="rood">delay</span>(500);                       <span class="grijs">// wait for a second</span><br />
 
-					  <span class="tab" /><span class="rood">digitalWrite</span>(13, <span class="blauw">LOW</span>);    <span class="grijs">// turn the LED off by making the voltage LOW</span><br />
+						  <span class="tab" /><span class="rood">digitalWrite</span>(13, <span class="blauw">LOW</span>);    <span class="grijs">// turn the LED off by making the voltage LOW</span><br />
 
-					  <span class="tab" /><span class="rood">delay</span>(500);                       <span class="grijs">// wait for a second</span><br />
+						  <span class="tab" /><span class="rood">delay</span>(500);                       <span class="grijs">// wait for a second</span><br />
 
-					}
-				</p>
-		  	</div>
+						}
+					</p>
+			  	</div>
 
-		  	<video width="320" height="240" controls>
-			  <source src="vid/exercise3c.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-			</video>
+			  	<video width="320" height="240" controls>
+				  <source src="vid/exercise3c.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+				</video>
 
-		  	<div class="lijn"></div>
+			  	<div class="lijn"></div>
 
-		  	<div>
-		  		<p>
-		  			<b>Exercise 4C</b>
-		  			<br />
-		  			Bij deze opdracht moest ik er voor zorgen dat de lampjes omstebeurt langzaam aan en uit gingen.
-		  	</div>
+			  	<div>
+			  		<p>
+			  			<b>Exercise 4C</b>
+			  			<br />
+			  			Bij deze opdracht moest ik er voor zorgen dat de lampjes omstebeurt langzaam aan en uit gingen.
+			  	</div>
 
-		  	<div class="geelvak">
-		  		<p>
-		  			<span class="blauw">int</span> greenLedPin = 10;<br />
+			  	<div class="geelvak">
+			  		<p>
+			  			<span class="blauw">int</span> greenLedPin = 10;<br />
 
-					<span class="blauw">int</span> yellowLedPin = 9;<br />
+						<span class="blauw">int</span> yellowLedPin = 9;<br />
 
-					<span class="blauw">int</span> brightness = 0;<br />
+						<span class="blauw">int</span> brightness = 0;<br />
 
-					<span class="blauw">int</span> fadeAmount = 5;<br />
+						<span class="blauw">int</span> fadeAmount = 5;<br />
 
-					<br />
+						<br />
 
-					<span class="blauw">void</span> <span class="groen">setup</span>() {<br />
+						<span class="blauw">void</span> <span class="groen">setup</span>() {<br />
 
-					  <span class="tab" /><span class="rood">pinMode</span>(greenLedPin, <span class="blauw">OUTPUT</span>);<br />
+						  <span class="tab" /><span class="rood">pinMode</span>(greenLedPin, <span class="blauw">OUTPUT</span>);<br />
 
-					  <span class="tab" /><span class="rood">pinMode</span>(yellowLedPin, <span class="blauw">OUTPUT</span>);<br />
+						  <span class="tab" /><span class="rood">pinMode</span>(yellowLedPin, <span class="blauw">OUTPUT</span>);<br />
 
-					}<br />
+						}<br />
 
-					<br />
+						<br />
 
-					<span class="blauw">void</span> <span class="groen">loop</span>() {<br />
+						<span class="blauw">void</span> <span class="groen">loop</span>() {<br />
 
-					  <span class="tab" /><span class="groen">for</span> (<span class="blauw">int</span> brightness=0; brightness < 256; brightness++){ <br />
+						  <span class="tab" /><span class="groen">for</span> (<span class="blauw">int</span> brightness=0; brightness < 256; brightness++){ <br />
 
-					    <span class="tab2" /><span class="rood">analogWrite</span>(yellowLedPin, brightness);<br />
+						    <span class="tab2" /><span class="rood">analogWrite</span>(yellowLedPin, brightness);<br />
 
-					    <span class="tab2" /><span class="rood">analogWrite</span>(greenLedPin, 255-brightness);<br />
+						    <span class="tab2" /><span class="rood">analogWrite</span>(greenLedPin, 255-brightness);<br />
 
-					    <span class="tab2" /><span class="rood">delay</span>(10);<br />
+						    <span class="tab2" /><span class="rood">delay</span>(10);<br />
 
-					  <span class="tab" />}<br />
+						  <span class="tab" />}<br />
 
-					  <br />
-					  
-					  <span class="tab" /><span class="groen">for</span> (<span class="blauw">int</span> brightness=255; brightness >0; brightness--){<br />
+						  <br />
+						  
+						  <span class="tab" /><span class="groen">for</span> (<span class="blauw">int</span> brightness=255; brightness >0; brightness--){<br />
 
-					    <span class="tab2" /><span class="rood">analogWrite</span>(yellowLedPin, brightness);<br />
+						    <span class="tab2" /><span class="rood">analogWrite</span>(yellowLedPin, brightness);<br />
 
-					    <span class="tab2" /><span class="rood">analogWrite</span>(greenLedPin, 255-brightness);<br />
+						    <span class="tab2" /><span class="rood">analogWrite</span>(greenLedPin, 255-brightness);<br />
 
-					    <span class="tab2" /><span class="rood">delay</span>(10);<br />
+						    <span class="tab2" /><span class="rood">delay</span>(10);<br />
 
-					  <span class="tab" />}<br />
+						  <span class="tab" />}<br />
 
-					}
-				</p>
-		  	</div>
+						}
+					</p>
+			  	</div>
 
-		  	<video width="320" height="240" controls>
-			  <source src="vid/exercise4c.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-			</video>
+			  	<video width="320" height="240" controls>
+				  <source src="vid/exercise4c.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+				</video>
 
-			<div class="lijn"></div>
+				<div class="lijn"></div>
 
-		  	<div>
-		  		<p>
-		  			<b>Exercise 6C</b>
-		  			<br />
-		  			Bij deze opdracht moest ik werken met een potentiometer. Als je eraan draait moet het ene lampje langzaam uit gaan en het andere lampje langzaam aan.
-		  		</p>
-		  	</div>
+			  	<div>
+			  		<p>
+			  			<b>Exercise 6C</b>
+			  			<br />
+			  			Bij deze opdracht moest ik werken met een potentiometer. Als je eraan draait moet het ene lampje langzaam uit gaan en het andere lampje langzaam aan.
+			  		</p>
+			  	</div>
 
-		  	<div class="geelvak">
-		  		<p>
-		  			int greenLedPin = 10;<br />
+			  	<div class="geelvak">
+			  		<p>
+			  			int greenLedPin = 10;<br />
 
-					int yellowLedPin = 9;<br />
+						int yellowLedPin = 9;<br />
 
-					<br />
+						<br />
 
-					float sensorValue1 = 0.0; // variable for sensor value<br />
+						float sensorValue1 = 0.0; // variable for sensor value<br />
 
-					float sensorValue2 = 0.0; // variable for sensor value<br />
+						float sensorValue2 = 0.0; // variable for sensor value<br />
 
-					int sensorPin = A0; // variable for sensor pin<br />
+						int sensorPin = A0; // variable for sensor pin<br />
 
-					<br />
+						<br />
 
-					void setup(){<br />
+						void setup(){<br />
 
-					  <span class="tab">pinMode(greenLedPin, OUTPUT);<br />
+						  <span class="tab">pinMode(greenLedPin, OUTPUT);<br />
 
-					  <span class="tab">pinMode(yellowLedPin, OUTPUT);<br />
+						  <span class="tab">pinMode(yellowLedPin, OUTPUT);<br />
 
-					  <span class="tab">pinMode(sensorPin, INPUT);<br />
+						  <span class="tab">pinMode(sensorPin, INPUT);<br />
 
-					  <span class="tab">Serial.begin(9600);<br />
+						  <span class="tab">Serial.begin(9600);<br />
 
-					}<br />
+						}<br />
 
-					<br />
+						<br />
 
-					void loop() {<br />
+						void loop() {<br />
 
-					  <span class="tab">sensorValue1 = analogRead(sensorPin); // read the value/voltage on the sensor pin and<br />
+						  <span class="tab">sensorValue1 = analogRead(sensorPin); // read the value/voltage on the sensor pin and<br />
 
-					  <span class="tab">sensorValue1 = (sensorValue1/1023)*255; // store that value in the variable sensorValue<br />
+						  <span class="tab">sensorValue1 = (sensorValue1/1023)*255; // store that value in the variable sensorValue<br />
 
-					  <span class="tab">sensorValue1 = map(sensorValue1, 0, 255, 0, 255);<br />
+						  <span class="tab">sensorValue1 = map(sensorValue1, 0, 255, 0, 255);<br />
 
-					  <span class="tab">sensorValue2 = analogRead(sensorPin); // read the value/voltage on the sensor pin and<br />
+						  <span class="tab">sensorValue2 = analogRead(sensorPin); // read the value/voltage on the sensor pin and<br />
 
-					  <span class="tab">sensorValue2 = (sensorValue2/1023)*255; // store that value in the variable sensorValue<br />
+						  <span class="tab">sensorValue2 = (sensorValue2/1023)*255; // store that value in the variable sensorValue<br />
 
-					  <span class="tab">sensorValue2 = map(sensorValue2, 255, 0, 0, 255);<br />
+						  <span class="tab">sensorValue2 = map(sensorValue2, 255, 0, 0, 255);<br />
 
-					  <span class="tab">analogWrite(greenLedPin, sensorValue1);<br />
+						  <span class="tab">analogWrite(greenLedPin, sensorValue1);<br />
 
-					  <span class="tab">analogWrite(yellowLedPin, sensorValue2);<br />
+						  <span class="tab">analogWrite(yellowLedPin, sensorValue2);<br />
 
-					  <span class="tab">Serial.println(sensorValue1); // print out sensorValue to the Serial Monitor<br />
+						  <span class="tab">Serial.println(sensorValue1); // print out sensorValue to the Serial Monitor<br />
 
-					  <span class="tab">delay(200); // delay for 0.2 seconds<br />
+						  <span class="tab">delay(200); // delay for 0.2 seconds<br />
 
-					}<br />
+						}<br />
 
-					<br />
+						<br />
 
-					//Open: Hulpmiddelen > Seriële monitor
-				</p>
-		  	</div>
+						//Open: Hulpmiddelen > Seriële monitor
+					</p>
+			  	</div>
 
-		  	<video width="320" height="240" controls>
-			  <source src="vid/exercise6c.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-			</video>
+			  	<video width="320" height="240" controls>
+				  <source src="vid/exercise6c.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+				</video>
 
-			<div class="lijn"></div>
+				<div class="lijn"></div>
 
-		  	<div>
-		  		<p>
-		  			<b>Exercise 7</b>
-		  			<br />
-		  			Bij deze opdracht moest ik gebruik maken van een licht sensor (LDR). Als er geen licht bij de sensor komt, moeten beide lampjes uit gaan. Als er wel licht bij de sensor komt, moeten beide lampjes weer aan gaan.
-		  		</p>
-		  	</div>
+			  	<div>
+			  		<p>
+			  			<b>Exercise 7</b>
+			  			<br />
+			  			Bij deze opdracht moest ik gebruik maken van een licht sensor (LDR). Als er geen licht bij de sensor komt, moeten beide lampjes uit gaan. Als er wel licht bij de sensor komt, moeten beide lampjes weer aan gaan.
+			  		</p>
+			  	</div>
 
-		  	<div class="geelvak">
-		  		<p>
-		  			int greenLedPin = 10;<br />
+			  	<div class="geelvak">
+			  		<p>
+			  			int greenLedPin = 10;<br />
 
-					int yellowLedPin = 9;<br />
+						int yellowLedPin = 9;<br />
 
-					int sensorValue1 = 9;<br />
+						int sensorValue1 = 9;<br />
 
-					int sensorValue2 = 10;<br />
+						int sensorValue2 = 10;<br />
 
-					<br />
+						<br />
 
-					float sensorValue = 0.0; // variable for sensor value<br />
+						float sensorValue = 0.0; // variable for sensor value<br />
 
-					int sensorPin = A0; // variable for sensor pin<br />
+						int sensorPin = A0; // variable for sensor pin<br />
 
-					<br />
+						<br />
 
-					void setup() {<br />
+						void setup() {<br />
 
-					  <span class="tab">pinMode(greenLedPin, OUTPUT);<br />
+						  <span class="tab">pinMode(greenLedPin, OUTPUT);<br />
 
-					  <span class="tab">pinMode(yellowLedPin, OUTPUT);<br />
+						  <span class="tab">pinMode(yellowLedPin, OUTPUT);<br />
 
-					  <span class="tab">pinMode(sensorPin, INPUT);<br />
+						  <span class="tab">pinMode(sensorPin, INPUT);<br />
 
-					  <span class="tab">Serial.begin(9600);<br />
+						  <span class="tab">Serial.begin(9600);<br />
 
-					}<br />
+						}<br />
 
-					<br />
+						<br />
 
-					void loop() {<br />
+						void loop() {<br />
 
-					  <span class="tab">sensorValue = analogRead(sensorPin); // read the value/voltage on the sensor pin and<br />
+						  <span class="tab">sensorValue = analogRead(sensorPin); // read the value/voltage on the sensor pin and<br />
 
-					  <span class="tab">sensorValue1 = map(sensorValue, 400, 700, 0, 255);<br />
+						  <span class="tab">sensorValue1 = map(sensorValue, 400, 700, 0, 255);<br />
 
-					  <span class="tab">sensorValue2 = map(sensorValue, 400, 700, 0, 255);<br />
+						  <span class="tab">sensorValue2 = map(sensorValue, 400, 700, 0, 255);<br />
 
-					  <span class="tab">sensorValue1 = constrain(sensorValue1, 0, 255);  // limits range of sensor values to between 10 and 150<br />
+						  <span class="tab">sensorValue1 = constrain(sensorValue1, 0, 255);  // limits range of sensor values to between 10 and 150<br />
 
-					  <span class="tab">sensorValue2 = constrain(sensorValue2, 0, 255);  // limits range of sensor values to between 10 and 150<br />
+						  <span class="tab">sensorValue2 = constrain(sensorValue2, 0, 255);  // limits range of sensor values to between 10 and 150<br />
 
-					  <span class="tab">analogWrite(greenLedPin, sensorValue1);<br />
+						  <span class="tab">analogWrite(greenLedPin, sensorValue1);<br />
 
-					  <span class="tab">analogWrite(yellowLedPin, sensorValue2);<br />
+						  <span class="tab">analogWrite(yellowLedPin, sensorValue2);<br />
 
-					  <br />
-					  
-					  <span class="tab">Serial.println(sensorValue1); // print out sensorValue to the Serial Monitor<br />
+						  <br />
+						  
+						  <span class="tab">Serial.println(sensorValue1); // print out sensorValue to the Serial Monitor<br />
 
-					  <span class="tab">delay(200); // delay for 0.2 seconds<br />
+						  <span class="tab">delay(200); // delay for 0.2 seconds<br />
 
-					}<br />
+						}<br />
 
-					<br />
+						<br />
 
-					//Open: Hulpmiddelen > Seriële monitor
-				</p>
-		  	</div>
+						//Open: Hulpmiddelen > Seriële monitor
+					</p>
+			  	</div>
 
-		  	<video width="320" height="240" controls>
-			  <source src="vid/exercise7.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-			</video>
+			  	<video width="320" height="240" controls>
+				  <source src="vid/exercise7.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+				</video>
 
-			<div class="lijn"></div>
+				<div class="lijn"></div>
 
-		  	<div>
-		  		<p>
-		  			<b>Exercise 8</b>
-		  			<br />
-		  			Bij deze opdracht moest ik gebruik maken van de volgende formule:<br />
-		  			V<sub>out</sub> = V <sub>in</sub> * (R2 / (R1 + R2))
-		  		</p>
-		  	</div>
+			  	<div>
+			  		<p>
+			  			<b>Exercise 8</b>
+			  			<br />
+			  			Bij deze opdracht moest ik gebruik maken van de volgende formule:<br />
+			  			V<sub>out</sub> = V <sub>in</sub> * (R2 / (R1 + R2))
+			  		</p>
+			  	</div>
 
-		  	<div class="geelvak">
-		  		<p>
-		  			int sensorValue = 0; // variable for sensor value <br />
+			  	<div class="geelvak">
+			  		<p>
+			  			int sensorValue = 0; // variable for sensor value <br />
 
-					int sensorPin = A0; // variable for sensor pin<br />
+						int sensorPin = A0; // variable for sensor pin<br />
 
-					<br />
+						<br />
 
-					void setup() {<br />
+						void setup() {<br />
 
-					  <span class="tab">pinMode(sensorPin, INPUT);<br />
+						  <span class="tab">pinMode(sensorPin, INPUT);<br />
 
-					  <span class="tab">Serial.begin(9600);<br />
+						  <span class="tab">Serial.begin(9600);<br />
 
-					}<br />
+						}<br />
 
-					<br />
+						<br />
 
-					void loop() {<br />
+						void loop() {<br />
 
-					  <span class="tab">sensorValue = analogRead(sensorPin); // read the value/voltage on the sensor pin and store that value in the variable sensorValue<br />
+						  <span class="tab">sensorValue = analogRead(sensorPin); // read the value/voltage on the sensor pin and store that value in the variable sensorValue<br />
 
-					  <span class="tab">Serial.println(sensorValue); // print out sensorValue to the Serial Monitor<br />
+						  <span class="tab">Serial.println(sensorValue); // print out sensorValue to the Serial Monitor<br />
 
-					  <span class="tab">delay(200); // delay for 0.2 seconds<br />
+						  <span class="tab">delay(200); // delay for 0.2 seconds<br />
 
-					}<br />
+						}<br />
 
-					<br />
+						<br />
 
-					//Open: Hulpmiddelen > Seriële monitor
-				</p>
-		  	</div>
+						//Open: Hulpmiddelen > Seriële monitor
+					</p>
+			  	</div>
 
-		  	<video width="320" height="240" controls>
-			  <source src="vid/exercise8.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-			</video>
+			  	<video width="320" height="240" controls>
+				  <source src="vid/exercise8.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+				</video>
 
-			<div class="lijn"></div>
+				<div class="lijn"></div>
 
-		  	<div>
-		  		<p>
-		  			<b>Exercise 9b</b>
-		  			<br />
-		  			Bij deze opdracht moest ik het programma 'Processing' gebruiken. Je moest je creativiteit gebruiken en er voor zorgen dat er iets interessants gebeurde wanneer je draaide aan de potentiometer.
-		  		</p>
-		  	</div>
+			  	<div>
+			  		<p>
+			  			<b>Exercise 9b</b>
+			  			<br />
+			  			Bij deze opdracht moest ik het programma 'Processing' gebruiken. Je moest je creativiteit gebruiken en er voor zorgen dat er iets interessants gebeurde wanneer je draaide aan de potentiometer.
+			  		</p>
+			  	</div>
 
-		  	<div class="geelvak">
-		  		<p>
-		  			float sensorValue = 0; // variable for sensor value<br />
+			  	<div class="geelvak">
+			  		<p>
+			  			float sensorValue = 0; // variable for sensor value<br />
 
-					int sensorPin = A0; // variable for sensor pin<br />
+						int sensorPin = A0; // variable for sensor pin<br />
 
-					int greenLedPin = 10; // variable for green LED pin<br />
+						int greenLedPin = 10; // variable for green LED pin<br />
 
-					<br />
+						<br />
 
-					void setup() {<br />
+						void setup() {<br />
 
-					  <span class="tab">Serial.begin(9600); // Start the Serial connection at a speed of 9600 bps<br />
+						  <span class="tab">Serial.begin(9600); // Start the Serial connection at a speed of 9600 bps<br />
 
-					  <span class="tab">pinMode(sensorPin, INPUT); // Input pin for potmeter or LDR<br />
+						  <span class="tab">pinMode(sensorPin, INPUT); // Input pin for potmeter or LDR<br />
 
-					  <span class="tab">pinMode(greenLedPin, OUTPUT); // Output pin for LED<br />
+						  <span class="tab">pinMode(greenLedPin, OUTPUT); // Output pin for LED<br />
 
-					}<br />
+						}<br />
 
-					<br />
+						<br />
 
-					void loop() {<br />
+						void loop() {<br />
 
-					  <span class="tab">sensorValue = analogRead(sensorPin); // Read the value/current on the sensor pin and store that value in the variable sensorValue<br />
+						  <span class="tab">sensorValue = analogRead(sensorPin); // Read the value/current on the sensor pin and store that value in the variable sensorValue<br />
 
-					  <span class="tab">sensorValue = (sensorValue/1023)*255; // Rescale the sensor's value. Change to calibrate the sensor.<br />
+						  <span class="tab">sensorValue = (sensorValue/1023)*255; // Rescale the sensor's value. Change to calibrate the sensor.<br />
 
-					  <span class="tab">analogWrite(greenLedPin, sensorValue); // Send power to LED<br />
+						  <span class="tab">analogWrite(greenLedPin, sensorValue); // Send power to LED<br />
 
-					  <span class="tab">Serial.println(sensorValue); // Print the sensorValue to the serial // connection<br />
+						  <span class="tab">Serial.println(sensorValue); // Print the sensorValue to the serial // connection<br />
 
-					  <span class="tab">delay(100); // Wait 0.1 seconds<br />
+						  <span class="tab">delay(100); // Wait 0.1 seconds<br />
 
-					}
-				</p>
-		  	</div>
+						}
+					</p>
+			  	</div>
 
-		  	<div class="blauwvak">
-		  		<p>
-		  			import processing.serial.*;<br />
+			  	<div class="blauwvak">
+			  		<p>
+			  			import processing.serial.*;<br />
 
-		  			<br />
+			  			<br />
 
-					Serial myPort;<br />
+						Serial myPort;<br />
 
-					String sensorReading="";<br />
+						String sensorReading="";<br />
 
-					<br />
+						<br />
 
-					void setup() {<br />
+						void setup() {<br />
 
-					  <span class="tab">size(800, 800);<br />
+						  <span class="tab">size(800, 800);<br />
 
-					  <span class="tab">myPort = new Serial(this, Serial.list()[1], 9600); // instead of 5, choose what even serial port the Arduino connects to<br />
+						  <span class="tab">myPort = new Serial(this, Serial.list()[1], 9600); // instead of 5, choose what even serial port the Arduino connects to<br />
 
-					  <span class="tab">myPort.bufferUntil('\n');<br />
+						  <span class="tab">myPort.bufferUntil('\n');<br />
 
-					}<br />
+						}<br />
 
-					<br />
+						<br />
 
-					void draw() {<br />
+						void draw() {<br />
 
-					  <span class="tab">background(255);<br />
+						  <span class="tab">background(255);<br />
 
-					  <span class="tab">fill(0);<br />
+						  <span class="tab">fill(0);<br />
 
-					  <span class="tab">text("Sensor Reading: " + sensorReading, 322, 260);<br />
+						  <span class="tab">text("Sensor Reading: " + sensorReading, 322, 260);<br />
 
-					  <span class="tab">//quad(0, 0, 0, 400, 0, float(sensorReading), float(sensorReading), float(sensorReading));<br />
+						  <span class="tab">//quad(0, 0, 0, 400, 0, float(sensorReading), float(sensorReading), float(sensorReading));<br />
 
-					  <span class="tab">//ellipse(width/5, height/5, float(sensorReading), float(sensorReading));<br />
+						  <span class="tab">//ellipse(width/5, height/5, float(sensorReading), float(sensorReading));<br />
 
-					  <span class="tab">arc(400, 400, 200, 200, 0, (float(sensorReading)/40.5), PIE);<br />
+						  <span class="tab">arc(400, 400, 200, 200, 0, (float(sensorReading)/40.5), PIE);<br />
 
-					}<br />
+						}<br />
 
-					<br />
+						<br />
 
-					void serialEvent (Serial myPort) {<br />
+						void serialEvent (Serial myPort) {<br />
 
-					  <span class="tab">sensorReading = myPort.readStringUntil('\n');<br />
+						  <span class="tab">sensorReading = myPort.readStringUntil('\n');<br />
 
-					}
-		  		</p>
-		  	</div>
+						}
+			  		</p>
+			  	</div>
 
-		  	<video width="320" height="240" controls>
-			  <source src="vid/exercise9b.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-			</video>
+			  	<video width="320" height="240" controls>
+				  <source src="vid/exercise9b.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+				</video>
 
-			<div class="lijn"></div>
+				<div class="lijn"></div>
 
-		  	<div>
-		  		<p>
-		  			<b>Exercise 10F</b>
-		  			<br />
-		  			Bij deze opdracht moest ik er voor zorgen dat de LED aan gaat wanneer er 1 button is ingedrukt, maar niet wanneer ze allebei ingedrukt zijn.
-		  		</p>
-		  	</div>
+			  	<div>
+			  		<p>
+			  			<b>Exercise 10F</b>
+			  			<br />
+			  			Bij deze opdracht moest ik er voor zorgen dat de LED aan gaat wanneer er 1 button is ingedrukt, maar niet wanneer ze allebei ingedrukt zijn.
+			  		</p>
+			  	</div>
 
-		  	<div class="geelvak">
-		  		<p>
-		  			// constants won't change. They're used here to set pin numbers:<br />
+			  	<div class="geelvak">
+			  		<p>
+			  			// constants won't change. They're used here to set pin numbers:<br />
 
-					const int buttonPin1 = 2;     // the number of the pushbutton pin<br />
+						const int buttonPin1 = 2;     // the number of the pushbutton pin<br />
 
-					const int buttonPin2 = 3;     // the number of the pushbutton pin<br />
+						const int buttonPin2 = 3;     // the number of the pushbutton pin<br />
 
-					const int ledPin =  13;      // the number of the LED pin<br />
+						const int ledPin =  13;      // the number of the LED pin<br />
 
-					<br />
+						<br />
 
-					void setup() {<br />
+						void setup() {<br />
 
-					  <span class="tab">// initialize the LED pin as an output:<br />
+						  <span class="tab">// initialize the LED pin as an output:<br />
 
-					  <span class="tab">pinMode(ledPin, OUTPUT);<br />
+						  <span class="tab">pinMode(ledPin, OUTPUT);<br />
 
-					  <span class="tab">// initialize the pushbutton pin as an input:<br />
+						  <span class="tab">// initialize the pushbutton pin as an input:<br />
 
-					  <span class="tab">pinMode(buttonPin1, INPUT);<br />
+						  <span class="tab">pinMode(buttonPin1, INPUT);<br />
 
-					  <span class="tab">// initialize the pushbutton pin as an input:<br />
+						  <span class="tab">// initialize the pushbutton pin as an input:<br />
 
-					  <span class="tab">pinMode(buttonPin2, INPUT);<br />
+						  <span class="tab">pinMode(buttonPin2, INPUT);<br />
 
-					}<br />
+						}<br />
 
-					<br />
+						<br />
 
-					void loop() {<br />
+						void loop() {<br />
 
-					  <span class="tab">// check if the pushbutton is pressed. If it is, the buttonState is HIGH:<br />
+						  <span class="tab">// check if the pushbutton is pressed. If it is, the buttonState is HIGH:<br />
 
-					  <span class="tab">if ((digitalRead(buttonPin1) == HIGH) && (digitalRead(buttonPin2) == HIGH)) {<br />
+						  <span class="tab">if ((digitalRead(buttonPin1) == HIGH) && (digitalRead(buttonPin2) == HIGH)) {<br />
 
-					    <span class="tab2">// turn LED on:<br />
+						    <span class="tab2">// turn LED on:<br />
 
-					    <span class="tab2">digitalWrite(ledPin, LOW);<br />
+						    <span class="tab2">digitalWrite(ledPin, LOW);<br />
 
-					  <span class="tab">} else if ((digitalRead(buttonPin1) == HIGH) || (digitalRead(buttonPin2) == HIGH)) {<br />
+						  <span class="tab">} else if ((digitalRead(buttonPin1) == HIGH) || (digitalRead(buttonPin2) == HIGH)) {<br />
 
-					    <span class="tab2">// turn LED on:<br />
+						    <span class="tab2">// turn LED on:<br />
 
-					    <span class="tab2">digitalWrite(ledPin, HIGH);<br />
+						    <span class="tab2">digitalWrite(ledPin, HIGH);<br />
 
-					  <span class="tab">} else {<br />
+						  <span class="tab">} else {<br />
 
-					    <span class="tab2">// turn LED off:<br />
+						    <span class="tab2">// turn LED off:<br />
 
-					    <span class="tab2">digitalWrite(ledPin, LOW);<br />
+						    <span class="tab2">digitalWrite(ledPin, LOW);<br />
 
-					  <span class="tab">}<br />
+						  <span class="tab">}<br />
 
-					}
-				</p>
-		  	</div>
+						}
+					</p>
+			  	</div>
 
-		  	<video width="320" height="240" controls>
-			  <source src="vid/exercise10f.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-			</video>
+			  	<video width="320" height="240" controls>
+				  <source src="vid/exercise10f.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+				</video>
 
-			<div class="lijn"></div>
+				<div class="lijn"></div>
 
-		  	<div>
-		  		<p>
-		  			<b>Exercise 11B</b>
-		  			<br />
-		  			Bij deze opdracht moest ik gebruik maken van servomotor. De servo moest ik op een interessante manier laten bewegen.
-		  		</p>
-		  	</div>
+			  	<div>
+			  		<p>
+			  			<b>Exercise 11B</b>
+			  			<br />
+			  			Bij deze opdracht moest ik gebruik maken van servomotor. De servo moest ik op een interessante manier laten bewegen.
+			  		</p>
+			  	</div>
 
-		  	<div class="geelvak">
-		  		<p>
-		  			#include < Servo.h><br />
+			  	<div class="geelvak">
+			  		<p>
+			  			#include < Servo.h><br />
 
-					Servo myServo;      // Declare a servo object for us to control<br />
+						Servo myServo;      // Declare a servo object for us to control<br />
 
-					int servoPin = 9;   // Var for the pin the servo connects to<br />
+						int servoPin = 9;   // Var for the pin the servo connects to<br />
 
-					int pos = 0;        // Var to keep track of the servo's position<br />
+						int pos = 0;        // Var to keep track of the servo's position<br />
 
-					<br />
+						<br />
 
-					void setup() {<br />
+						void setup() {<br />
 
-					  <span class="tab">myServo.attach(servoPin); // Tell the servo to what pin it's connected to<br />
+						  <span class="tab">myServo.attach(servoPin); // Tell the servo to what pin it's connected to<br />
 
-					}<br />
+						}<br />
 
-					<br />
+						<br />
 
-					void loop() {<br />
+						void loop() {<br />
 
-					  <span class="tab">for(pos = 0; pos < 180; pos += 1){    // Loop, pos is added to (from 0 to 160)<br />
+						  <span class="tab">for(pos = 0; pos < 180; pos += 1){    // Loop, pos is added to (from 0 to 160)<br />
 
-					    <span class="tab2">myServo.write(pos);                 // Turn the servo to the position in pos<br />
+						    <span class="tab2">myServo.write(pos);                 // Turn the servo to the position in pos<br />
 
-					    <span class="tab2">delay(15);                          // Wait 15ms<br />
+						    <span class="tab2">delay(15);                          // Wait 15ms<br />
 
-					    <span class="tab2">myServo.write(0);                   // Turn the servo to the position in pos<br />
+						    <span class="tab2">myServo.write(0);                   // Turn the servo to the position in pos<br />
 
-					    <span class="tab2">delay(500);                         // Wait 15ms<br />
+						    <span class="tab2">delay(500);                         // Wait 15ms<br />
 
-					    <span class="tab2">myServo.write(30);                  // Turn the servo to the position in pos<br />
+						    <span class="tab2">myServo.write(30);                  // Turn the servo to the position in pos<br />
 
-					    <span class="tab2">delay(1000);                        // Wait 15ms<br />
+						    <span class="tab2">delay(1000);                        // Wait 15ms<br />
 
-					    <span class="tab2">myServo.write(0);                   // Turn the servo to the position in pos<br />
+						    <span class="tab2">myServo.write(0);                   // Turn the servo to the position in pos<br />
 
-					    <span class="tab2">delay(200);                         // Wait 15ms<br />
+						    <span class="tab2">delay(200);                         // Wait 15ms<br />
 
-					    <span class="tab2">myServo.write(120);                 // Turn the servo to the position in pos<br />
+						    <span class="tab2">myServo.write(120);                 // Turn the servo to the position in pos<br />
 
-					    <span class="tab2">delay(1000);                        // Wait 15ms<br />
+						    <span class="tab2">delay(1000);                        // Wait 15ms<br />
 
-					    <span class="tab2">myServo.write(80);                  // Turn the servo to the position in pos<br />
+						    <span class="tab2">myServo.write(80);                  // Turn the servo to the position in pos<br />
 
-					    <span class="tab2">delay(200);                         // Wait 15ms<br />
+						    <span class="tab2">delay(200);                         // Wait 15ms<br />
 
-					  <span class="tab">}<br />
+						  <span class="tab">}<br />
 
-					}
-				</p>
-		  	</div>
+						}
+					</p>
+			  	</div>
 
-		  	<video width="320" height="240" controls>
-			  <source src="vid/exercise11b.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-			</video>
+			  	<video width="320" height="240" controls>
+				  <source src="vid/exercise11b.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+				</video>
 
-			<div class="lijn"></div>
+				<div class="lijn"></div>
 
-		  	<div>
-		  		<p>
-		  			<b>Exercise 12B</b>
-		  			<br />
-		  			Bij deze opdracht moest ik weer gebruik maken van de servo. Als je de ene button indrukt, beweegt de wijzer naar links en als je de andere button indrukt, beweegt de wijzer naar rechts.
-		  		</p>
-		  	</div>
+			  	<div>
+			  		<p>
+			  			<b>Exercise 12B</b>
+			  			<br />
+			  			Bij deze opdracht moest ik weer gebruik maken van de servo. Als je de ene button indrukt, beweegt de wijzer naar links en als je de andere button indrukt, beweegt de wijzer naar rechts.
+			  		</p>
+			  	</div>
 
-		  	<div class="geelvak">
-		  		<p>
-		  			#include < Servo.h><br />
+			  	<div class="geelvak">
+			  		<p>
+			  			#include < Servo.h><br />
 
-					Servo myServo;<br />
+						Servo myServo;<br />
 
-					int servoPin = 9;<br />
+						int servoPin = 9;<br />
 
-					int pos = 0;<br />
+						int pos = 0;<br />
 
-					int buttonPinL = 3;<br />
+						int buttonPinL = 3;<br />
 
-					int buttonPinR = 2;<br />
+						int buttonPinR = 2;<br />
 
-					<br />
+						<br />
 
 
-					void setup() {<br />
+						void setup() {<br />
 
-					  <span class="tab">myServo.attach(servoPin);<br />
+						  <span class="tab">myServo.attach(servoPin);<br />
 
-					  <span class="tab">pinMode(buttonPinL, INPUT);<br />
+						  <span class="tab">pinMode(buttonPinL, INPUT);<br />
 
-					  <span class="tab">pinMode(buttonPinR, INPUT);<br />
+						  <span class="tab">pinMode(buttonPinR, INPUT);<br />
 
-					}<br />
+						}<br />
 
-					<br />
+						<br />
 
-					void loop() {<br />
+						void loop() {<br />
 
-					    <span class="tab">if (digitalRead(buttonPinL) == HIGH && digitalRead(buttonPinR) == LOW){<br />
+						    <span class="tab">if (digitalRead(buttonPinL) == HIGH && digitalRead(buttonPinR) == LOW){<br />
 
-					      <span class="tab2">pos++;<br />
+						      <span class="tab2">pos++;<br />
 
-					        <span class="tab2">if (pos > 160) {<br />
+						        <span class="tab2">if (pos > 160) {<br />
 
-					          <span class="tab3">pos = 160;<br />
+						          <span class="tab3">pos = 160;<br />
 
-					        <span class="tab2">}<br />
+						        <span class="tab2">}<br />
 
-					      <span class="tab2">delay(5); <br />
+						      <span class="tab2">delay(5); <br />
 
-					    <span class="tab">}<br />
+						    <span class="tab">}<br />
 
-					    <span class="tab">if (digitalRead(buttonPinR) == HIGH && digitalRead(buttonPinL) == LOW){<br />
+						    <span class="tab">if (digitalRead(buttonPinR) == HIGH && digitalRead(buttonPinL) == LOW){<br />
 
-					      <span class="tab2">pos--;<br />
+						      <span class="tab2">pos--;<br />
 
-					      <span class="tab2">if (pos < 0) {<br />
+						      <span class="tab2">if (pos < 0) {<br />
 
-					        <span class="tab3">pos = 0;<br />
+						        <span class="tab3">pos = 0;<br />
 
-					      <span class="tab2">}<br />
+						      <span class="tab2">}<br />
 
-					      <span class="tab2">delay(5);<br />
+						      <span class="tab2">delay(5);<br />
 
-					    <span class="tab">}<br />
+						    <span class="tab">}<br />
 
-					    <span class="tab">if (pos >= 0 && pos <= 160) {<br />
+						    <span class="tab">if (pos >= 0 && pos <= 160) {<br />
 
-					      <span class="tab2">myServo.write(pos);<br />
+						      <span class="tab2">myServo.write(pos);<br />
 
-					    <span class="tab">}<br />
+						    <span class="tab">}<br />
 
-					}
-				</p>
-		  	</div>
+						}
+					</p>
+			  	</div>
 
-		  	<video width="320" height="240" controls>
-			  <source src="vid/exercise12b.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-			</video>
+			  	<video width="320" height="240" controls>
+				  <source src="vid/exercise12b.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+				</video>
 
-			<div class="lijn"></div>
+				<div class="lijn"></div>
 
-		  	<div>
-		  		<p>
-		  			<b>Exercise 13B</b>
-		  			<br />
-		  			Bij deze opdracht moest ik muziek maken met behulp van de speaker.
-		  		</p>
-		  	</div>
+			  	<div>
+			  		<p>
+			  			<b>Exercise 13B</b>
+			  			<br />
+			  			Bij deze opdracht moest ik muziek maken met behulp van de speaker.
+			  		</p>
+			  	</div>
 
-		  	<div class="geelvak">
-		  		<p>
-		  			...
-				</p>
-		  	</div>
+			  	<div class="geelvak">
+			  		<p>
+			  			...
+					</p>
+			  	</div>
 
-		  	<video width="320" height="240" controls>
-			  <!-- <source src="vid/exercise8.mp4" type="video/mp4"> -->
-			Your browser does not support the video tag.
-			</video>
-
-
-	  	</main>
+			  	<video width="320" height="240" controls>
+				  <!-- <source src="vid/exercise8.mp4" type="video/mp4"> -->
+				Your browser does not support the video tag.
+				</video>
+		  	</main>
+		  	
+		  	<footer class="centreer">
+			  	<div class="lijnfooter"></div>
+			  	<p>
+			  		&copy; 2019 ROBIN TWIGT
+			  	</p>
+			</footer>
+		</div>
 	</body>
 </html>

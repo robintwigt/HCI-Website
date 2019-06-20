@@ -20,6 +20,16 @@ p.titel {
   margin-bottom: 2px;
 }
 
+p.kleinetitel {
+  font-family: 'Staatliches', cursive;
+  font-size: 25px;
+  color: #232323;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+
 p.ondertitel {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
@@ -47,6 +57,40 @@ p.bronnen {
 
 p.hr {
   color: #fff7a0;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer p {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  letter-spacing: 5px;
+  word-spacing: 1px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div.dag {
+  text-align: center;
+  height: 46px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  box-shadow: 4px 2px #000000;
+}
+
+div.dageven{
+  background-color: #ccdeff;
+}
+
+div.dagoneven {
+  background-color: #fff7a0;
+}
+
+div.dag:hover {
+  background-color: white;
 }
 
 div.center {
@@ -77,15 +121,29 @@ div .plaatje {
   box-align: center;
 }
 
-.plaatje img {
+.plaatje300 img {
+  height: 300px;
+  margin: 0;
+}
+
+.plaatje200 img {
   height: 200px;
   margin: 0;
 }
 
-main {
+.tumbnail img {
+  width: 100%;
+  margin: 0;
+}
+
+.website {
+  width: 100%;
   position: absolute;
   left: 0;
   top: 350px;
+}
+
+main {
 }
 
 video {
@@ -100,6 +158,12 @@ video {
   background-color: #fff7a0;
 }
 
+.lijnfooter {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+}
+
 .geelvak p {
   background-color: #fff7a0;
   color: #232323;
@@ -110,6 +174,10 @@ video {
   background-color: #ccdeff;
   color: #232323;
   padding: 10px;
+}
+
+.centreer {
+  text-align: center;
 }
 
 .tab {
