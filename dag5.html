@@ -59,72 +59,265 @@
 	  	</div>
 
 	  	<picture class="grid-item foto">
-			<source media="(max-width: 499px)" srcset="img/index_4.jpg">
-			<source media="(min-width: 500px) and (max-width: 799px)" srcset="img/index_3.jpg">
-			<source media="(min-width: 800px) and (max-width: 1199px)" srcset="img/index_2.jpg">
-			<source media="(min-width: 1200px)" srcset="img/index_1.jpg">
-			<img src="img/index_3.jpg" alt="Achtergrond foto">
+			<source media="(max-width: 499px)" srcset="img/dag5_4.jpg">
+			<source media="(min-width: 500px) and (max-width: 799px)" srcset="img/dag5_3.jpg">
+			<source media="(min-width: 800px) and (max-width: 1199px)" srcset="img/dag5_2.jpg">
+			<source media="(min-width: 1200px)" srcset="img/dag5_1.jpg">
+			<img src="img/dag5_3.jpg" alt="Achtergrond foto">
 		</picture>
 
 		<div class="website">
 		  	<main class="content">
 		  		<div class="intro">
-			  		<p class="titel">Dag 5 - vrijdag 7 juni</p>
+			  		<p class="titel dagtitel">Dag 5 - vrijdag 7 juni</p>
 			  		<p>
-			  			Presentatie:
-						Marcello Gómez Maureira
-						Designing Playful Interactions
-						<br />
-						<br />
-						Na de presentatie heeft een groepslid de requirements en essentials list opgesteld. De requirements zijn:
-						Co-operative gameplay
-						Wireless connection between the Lilypad and the Vibe Boards
-						When pressing the buttons on the controller the bracelet vibrates in the corresponding direction
-						Arcade theme
-						A controller for the guide to be able to direct the guided
-						Bracelets with the Lilypad Vibe Boards
-						A maze
-						Start and Finish board hanging from the ceiling
-						A working stopwatch to keep track of time
-						A leaderboard for times
-						The guided has to be blindfolded and deafened
-						<br />
-						<br />
+			  			De dag begon met een presentatie van Marcello Gómez Maureira. Zijn presentatie ging over Designing Playful Interactions.
+					</p>
+
+					<div class="center">
+					  	<picture class="plaatje300">
+					  		<source media="(min-width: 0px)" srcset="img/dag51.jpg">
+							<img src="img/dag51.jpg" alt="Presentatie">
+					  	</picture>
+				  	</div>
+
+					<p class="geenonderkant">
+						Na de presentatie heeft Batuhan de requirements en essentials list opgesteld. De requirements zijn:
+					</p>
+
+					<div class="tabje">
+						<p>
+							Co-operative gameplay<br />
+							Wireless connection between the Lilypad and the Vibe Boards<br />
+							When pressing the buttons on the controller the bracelet vibrates in the corresponding direction<br />
+							Arcade theme<br />
+							A controller for the guide to be able to direct the guided<br />
+							Bracelets with the Lilypad Vibe Boards<br />
+							A maze<br />
+							Start and Finish board hanging from the ceiling<br />
+							A working stopwatch to keep track of time<br />
+							A leaderboard for times<br />
+							The guided has to be blindfolded and deafened
+						</p>
+					</div>
+					
+					<p class="geenonderkant">
 						De essentials zijn:
-						Wooden boards
-						Paint
-						Buttons
-						Lilypad
-						Arduino
-						Lilypad Vibe Board
-						Leather for the bracelets
-						LCD Screen
-						Whiteboard with markers
-						Either tape or wood for the maze
-						Wireless adapters for the Vibe Board and Lilypad
-						Wemos Wifi Arduino
-						Wireless headphones
-						Arcade music playlist
-						Blindfolds
-						Boards to hang from the ceiling
+					</p>
+
+					<div class="tabje">
+						<p>
+							Wooden boards<br />
+							Paint<br />
+							Buttons<br />
+							Lilypad<br />
+							Arduino<br />
+							Lilypad Vibe Board<br />
+							Leather for the bracelets<br />
+							LCD Screen<br />
+							Whiteboard with markers<br />
+							Either tape or wood for the maze<br />
+							Wireless adapters for the Vibe Board and Lilypad<br />
+							Wemos Wifi Arduino<br />
+							Wireless headphones<br />
+							Arcade music playlist<br />
+							Blindfolds<br />
+							Boards to hang from the ceiling<br />
+						</p>
+					</div>
+					
+					<p>
+						Ondertussen ben ik aan de slag gegaan met de timer. Gisteren (dag 4) hadden we namelijk bedacht dat het erg leuk zou zijn als de speler zelf de tijd bij kan houden in de arcade box. Anders zouden wij dat zelf moeten doen door middel van de stopwatch op onze mobiel, maar dat is veel minder leuk. Uiteindelijk is het gelukt om de timer werkend te krijgen. De code die ik hiervoor heb gebruikt is hieronder te lezen.
+					</p>
+
+					<div class="geelvak">
+						<p>
+							#include < LiquidCrystal.h><br />
+
+							LiquidCrystal lcd(7, 6, 5, 4, 3, 2);<br />
+
+							<br />
+
+							void setup() {<br />
+
+							  <span class="tab" />lcd.begin(16, 2);<br />
+
+							  <span class="tab" />lcd.clear();<br />
+
+							  <span class="tab" /><br />
+							  
+							  <span class="tab" />Serial.begin(9600);<br />
+
+							  <br />
+							  
+							  <span class="tab" />pinMode(8, INPUT);<br />
+
+							  <span class="tab" />digitalWrite(8, HIGH);<br />
+
+							  <span class="tab" />pinMode(9, INPUT);<br />
+
+							  <span class="tab" />digitalWrite(9, HIGH);<br />
+
+							}<br />
+
+							<br />
+
+							double i = 0;<br />
+
+							double a = millis();<br />
+
+							double c ;<br />
+
+							<br />
+
+							void loop() {<br />
+
+							  <span class="tab" />lcd.clear();<br />
+
+							  <span class="tab" />lcd.print("press start");<br />
+
+							  <span class="tab" />delay(100);<br />
+
+							  <br />
+							  
+							  <span class="tab" />if(digitalRead(8) == LOW) {<br />
+
+							    <span class="tab2" />lcd.clear();<br />
+
+							    <span class="tab2" />a = millis();<br />
+
+							    <span class="tab2" />while(digitalRead(9) == HIGH) {<br />
+
+							      <span class="tab3" />c = millis();<br />
+
+							      <span class="tab3" />i = (c - a) / 1000;<br />
+
+							      <span class="tab3" />lcd.print(i);<br />
+
+							      <span class="tab3" />lcd.setCursor(7,0);<br />
+
+							      <span class="tab3" />lcd.print("Seconds");<br />
+
+							      <span class="tab3" />lcd.setCursor(0,0);<br />
+
+							      <span class="tab3" />Serial.println(c);<br />
+
+							      <span class="tab3" />Serial.println(a);<br />
+
+							      <span class="tab3" />Serial.println(i);<br />
+
+							      <span class="tab3" />Serial.println("......");<br />
+
+							      <span class="tab3" />delay(100);<br />
+
+							    <span class="tab2" />}<br />
+
+							    <br />
+
+							    <span class="tab2" />if(digitalRead(9) == LOW) {<br />
+
+							      <span class="tab3" />while(digitalRead(8) == HIGH) {<br />
+
+							        <span class="tab4" />lcd.setCursor(0,0);<br />
+
+							        <span class="tab4" />lcd.print(i);<br />
+
+							        <span class="tab4" />lcd.setCursor(11,0);<br />
+
+							        <span class="tab4" />lcd.print("");<br />
+
+							        <span class="tab4" />lcd.setCursor(0,0);<br />
+
+							        <span class="tab4" />delay(100);<br />
+
+							      <span class="tab3" />}<br />
+
+							    <span class="tab2" />}<br />
+
+							  <span class="tab" />}<br />
+
+							}
+						</p>
+					</div>
+
+					<video width="320" height="240" controls>
+					  <source src="vid/dag51.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+
+					<p>
+						Het scherm zat nu op het Arduino bord en dat is niet handig als we het scherm later in de Arcade box willen verwerken. Ik heb het scherm er dus af gehaald en verbonden aan het bord door gebruik te maken van male-to-female kabels. Hieronder een foto van hoe het scherm is verbonden met het Arduino bord door middel van de male-to-female kabels en een video van dat het met deze kabels nog steeds werkt.
+					</p>
+
+					<div class="center">
+					  	<picture class="plaatje300">
+					  		<source media="(min-width: 0px)" srcset="img/dag52.jpg">
+							<img src="img/dag52.jpg" alt="Male-to-female kabels">
+					  	</picture>
+				  	</div>
+
+				  	<video width="320" height="240" controls>
+					  <source src="vid/dag52.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+
+					<p>
+						Vervolgens hebben we opgesteld wat er nog allemaal gekocht moest worden en wat er gedaan moest worden. Hierdoor kregen we een helder overzicht en wist iedereen waar we aan toe waren. Een van mijn groepsleden heeft ook al meteen een aantal dingen gekocht, bijvoorbeeld het hout voor de Arcade box. Ons idee is nu namelijk om een Arcade box te maken die om de nek hangt van persoon 2. Het gaat namelijk niet lukken om het draadloos te maken, dus moet de besturing draagbaar worden. We vonden de Arcade machine zo leuk eruit zien, dat we ervoor hebben gekozen om deze toch te maken, maar dan een versie die je om je nek kunt hangen.
 						<br />
 						<br />
-						Ondertussen ben ik aan de slag gegaan met de timer. Gisteren (dag 4) hadden we namelijk bedacht dat het erg leuk zou zijn als de speler zelf de tijd bij kan houden in de arcade box. Anders zouden wij dat zelf moeten doen door middel van de stopwatch op onze mobiel, maar dat is veel minder leuk. Een van mijn groepsleden had gisteren al geprobeerd om de timer te maken, maar dit was niet echt gelukt. Hierom ben ik opnieuw begonnen en is het gelukt om de timer werkend te krijgen.
+						Daarnaast hebben we gedacht over een naam van ons concept. We willen deze naam ook op de Arcade box zetten, dus moet het een leuke naam zijn. De naam ‘You and Eye’ is het uiteindelijk geworden, omdat je het spel met zijn tweeën speelt en omdat de ene persoon het oog is van de andere persoon. Dit vond iedereen de geschikste en leukste naam voor ons project.
 						<br />
 						<br />
-						Het scherm zat nu op het Arduino bord en dat is niet handig als we het scherm later in de Arcade box willen verwerken. Ik heb het scherm er dus af gehaald en verbonden aan het bord door gebruik te maken van male-to-female kabels.
-						<br />
-						<br />
-						Vervolgens hebben we opgesteld wat er nog allemaal gekocht moest worden en wat er gedaan moest worden. Hierdoor kregen we een helder overzicht en wist iedereen waar we aan toe waren. We hebben ook al meteen een aantal dingen gekocht, bijvoorbeeld het hout voor de Arcade box.
-						<br />
-						<br />
-						Daarnaast hebben we gedacht over een naam van ons concept. We willen deze naam ook op de Arcade box zetten, dus moet het een leuke naam zijn. Ik had de naam ‘You and Eye’ bedacht, omdat je het spel met zijn tweeën speelt en omdat de ene persoon het oog is van de andere persoon. Dit vond de rest van mijn groep ook een leuke naam, dus hebben we het gebruikt als concept naam.
-						<br />
-						<br />
-						De Arcade box willen we zwart gaan verven en we willen er stickers op plakken. Ik ben daarom begonnen met het zoeken naar leuke stickers die we op de box kunnen plakken. 
+						De Arcade box willen we zwart gaan verven en we willen er stickers op plakken. Ik ben daarom begonnen met het zoeken naar leuke stickers die we op de box kunnen plakken. Alle stickers heb ik in een Word document gezet, zodat we het later kunnen uitprinten. Hieronder is een afbeelding te zien van de stickers.
 			  		</p>
+
+			  		<div class="center">
+					  	<picture class="plaatje150">
+					  		<source media="(min-width: 0px)" srcset="img/dag53.jpg">
+							<img src="img/dag53.jpg" alt="Stickers">
+					  	</picture>
+				  	</div>
+
+				  	<p>
+				  		We hebben daarna de dag doorgenomen bij het scrum bord.
+				  	</p>
+
+				  	<div class="center">
+					  	<picture class="plaatje300">
+					  		<source media="(min-width: 0px)" srcset="img/dag54.jpg">
+							<img src="img/dag54.jpg" alt="Scrum bord">
+					  	</picture>
+				  	</div>
 			  	</div>
 		  	</main>
+
+		  	<div class="overzicht">
+		  		<a href="labweeks.html" class="overzicht">&lt; Terug naar overzicht Lab Weeks</a>
+		  	</div>
+
+		  	<a href="dag4.html">
+			  	<div class="vorigedag">
+			  		<p class="kleinetitel">dag 4</p>
+			  	</div>
+			</a>
+
+			<a href="dag4.html">
+				<div class="linkerpijl">
+					<img src="img/linkerpijltje.png" class="arrowleft">
+				</div>
+			</a>
+
+		  	<a href="dag6.html">
+			  	<div class="volgendedag">
+			  		<p class="kleinetitel">dag 6</p>
+			  	</div>
+			</a>
+
+			<a href="dag6.html">
+				<div class="rechterpijl">
+					<img src="img/rechterpijltje.png" class="arrowright">
+				</div>
+			</a>
 		  	
 		  	<footer class="centreer">
 			  	<div class="lijnfooter"></div>

@@ -59,74 +59,514 @@
 	  	</div>
 
 	  	<picture class="grid-item foto">
-			<source media="(max-width: 499px)" srcset="img/index_4.jpg">
-			<source media="(min-width: 500px) and (max-width: 799px)" srcset="img/index_3.jpg">
-			<source media="(min-width: 800px) and (max-width: 1199px)" srcset="img/index_2.jpg">
-			<source media="(min-width: 1200px)" srcset="img/index_1.jpg">
-			<img src="img/index_3.jpg" alt="Achtergrond foto">
+			<source media="(max-width: 499px)" srcset="img/dag4_4.jpg">
+			<source media="(min-width: 500px) and (max-width: 799px)" srcset="img/dag4_3.jpg">
+			<source media="(min-width: 800px) and (max-width: 1199px)" srcset="img/dag4_2.jpg">
+			<source media="(min-width: 1200px)" srcset="img/dag4_1.jpg">
+			<img src="img/dag4_3.jpg" alt="Achtergrond foto">
 		</picture>
 
 		<div class="website">
 		  	<main class="content">
 		  		<div class="intro">
-			  		<p class="titel">Dag 4 - donderdag 6 juni</p>
+			  		<p class="titel dagtitel">Dag 4 - donderdag 6 juni</p>
 			  		<p>
-			  			Meteen na het dagelijkse statusoverleg begon de presentatie van Teun.
-						Presentatie:
-						Teun Verkerk
-						Electronic lifeforms and media in public spaces
-						Lichten die je aan elkaar kan koppelen en die op elkaar reageren
-						Ledwork
-						Gesprek aangaan met dingen zoals een busstop 
-						<br />
-						<br />
+			  			De dag begon zoals altijd met de daily standup. We bespraken weer wat we gisteren gedaan hadden en wat we vandaag wilden gaan doen.
+			  		</p>
+
+			  		<div class="center">
+					  	<picture class="plaatje300">
+					  		<source media="(min-width: 0px)" srcset="img/dag42.jpg">
+							<img src="img/dag42.jpg" alt="Daily standup">
+					  	</picture>
+				  	</div>
+
+			  		<p class="geenonderkant">
+			  			Meteen na de daily standup begon de presentatie van Teun. Teun heeft een aantal van zijn projecten aan ons uitgelegd. Ik heb een aantal dingen opgeschreven tijdens de presentatie:
+			  		</p>
+
+			  		<div class="tabje">
+			  			<p>
+						Electronic lifeforms and media in public spaces.<br />
+						Ledwork: lichten die je aan elkaar kan koppelen en die op elkaar reageren.<br />
+						Gesprek aangaan met dingen zoals een busstop .
+						</p>
+					</div>
+
+					<p class="geenonderkant">
 						We zijn daarna gestart met het schrijven van de promise. Iedereen schreef al zijn ideeën op in het Google Drive bestand. De promises die we bedacht hadden, zijn:
-						We promise to be your eyes
-						We promise to not hurt you
-						We promise to be your guide
-						We promise to not let you walk into a wall
-						We promise to maintain your trust (in us)
-						We promise to keep our promise
-						We promise you can walk without seeing
-						We promise that you can rely on your senses
-						We promise to give you a real life gaming experience
-						We promise you to experience what it’s like to be in a game
-						We promise you to feel like what it is to be controlled 
-						<br />
-						<br />
-						Na het bedenken van alle promises, hebben we gestemd op de promise die wij het best vinden. Uiteindelijk was er het meest gestemd op de promise ‘We promise to be your guide’.
-						<br />
-						<br />
+					</p>
+
+					<div class="tabje">
+						<p>
+							We promise to be your eyes<br />
+							We promise to not hurt you<br />
+							We promise to be your guide<br />
+							We promise to not let you walk into a wall<br />
+							We promise to maintain your trust (in us)<br />
+							We promise to keep our promise<br />
+							We promise you can walk without seeing<br />
+							We promise that you can rely on your senses<br />
+							We promise to give you a real life gaming experience<br />
+							We promise you to experience what it’s like to be in a game<br />
+							We promise you to feel like what it is to be controlled<br />
+						</p>
+					</div>
+
+					<p>
+						Na het bedenken van alle promises, hebben we gestemd op de promise die wij het best vinden. Uiteindelijk was er het meest gestemd op de promise ‘We promise to be your guide’. Dit hebben we op een groot blad geschreven en opgehangen boven ons scrum bord.
+					</p>
+
+					<div class="center">
+					  	<picture class="plaatje300">
+					  		<source media="(min-width: 0px)" srcset="img/dag41.jpg">
+							<img src="img/dag41.jpg" alt="Promise">
+					  	</picture>
+				  	</div>
+
+					<p>
 						Vervolgens ben ik het doolhof gaan schetsen die we nodig gaan hebben voor de expo. 
 						<br />
 						<br />
-						Gisteren (dag 3) waren er al een aantal dingen uitgeprobeerd met de Lilypad, dit was echter niet helemaal gelukt. We zijn vandaag daarom verder gegaan met het testen van de Lilypad. Het lukte ons om ervoor te zorgen dat als je een button indrukt, dat er dan een LED gaat branden. 
-						<br />
-						<br />
-						Vervolgens wilden we ook kijken of dit werkt met de trilsensor. We hebben daarom de LED vervangen door de trilsensor. Gelukkig werkte dit ook, de trilsensor ging namelijk trillen wanneer je de button indrukte.
-						<br />
-						<br />
-						Bij ons concept gaan we gebruik maken van 2 trilsensoren. Hierom hebben we een tweede LED toegevoegd en een tweede button. We konden ervoor zorgen dat als je button 1 indrukt, dat dan LED 1 gaat branden en als je button 2 indrukt, dat dan LED 2 gaat branden. Ik had gisteren al een code hiervoor geschreven, deze code werkte wel met het Arduino bord, maar niet met de Lilypad. Hierom heb ik een andere code geschreven waarbij ik gebruik heb gemaakt van button states.
-						<br />
-						<br />
-						Hierna moesten we alleen nog een derde button toevoegen. Deze button moest ervoor gaan zorgen dat beide LEDs gaan branden als je de button indrukt. Ook hierbij werkte mijn code van gisteren niet, dus moest ik hem herschrijven met button states. Uiteindelijk is het me gedeeltelijk gelukt. De LEDs doen namelijk wat ze moeten doen bij elke button, alleen knipperen ze. Ik heb de code een paar keer helemaal omgegooid, maar we konden er niet achter komen waar dit probleem aan lag. Toen hebben we maar besloten om het zo te laten. We denken namelijk dat het niet erg gaat zijn, omdat we gebruik gaan maken van trilsensoren. Het valt dan waarschijnlijk minder op dan bij de LEDs. Als we er later achter komen dat het toch erg storend is bij de trilsensoren, dan gaan we dit probleem nog proberen op te lossen.
-						<br />
-						<br />
+						Gisteren (dag 3) waren er al een aantal dingen uitgeprobeerd met de Lilypad, dit was echter niet helemaal gelukt. We zijn vandaag daarom verder gegaan met het testen van de Lilypad. Het lukte ons om ervoor te zorgen dat als je een button indrukt, dat er dan een LED gaat branden. Dit is te zien in de video hieronder.
+					</p>
+
+					<video width="320" height="240" controls>
+					  <source src="vid/dag41.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+
+					<p>
+						Vervolgens wilden we ook kijken of dit werkt met de trilsensor. We hebben daarom de LED vervangen door de trilsensor. Gelukkig werkte dit ook, de trilsensor ging namelijk trillen wanneer je de button indrukte. De video hiervan is hieronder te zien.
+					</p>
+
+					<video width="320" height="240" controls>
+					  <source src="vid/dag42.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+
+					<p>
+						Bij ons concept gaan we gebruik maken van 2 trilsensoren. Hierom hebben we een tweede LED toegevoegd en een tweede button. We wilden ervoor zorgen dat als je button 1 indrukt, dat dan LED 1 gaat branden en als je button 2 indrukt, dat dan LED 2 gaat branden. Ik had gisteren al een code hiervoor geschreven, deze code werkte wel met het Arduino bord, maar niet met de Lilypad. Hierom heb ik een andere code geschreven waarbij ik gebruik heb gemaakt van button states. De code die uiteindelijk werkte, is hieronder te lezen.
+					</p>
+
+					<div class="geelvak">
+						<p>
+							// Pin the led is attached to<br />
+
+							int led1 = 9;<br />
+
+							int led2 = 6;<br />
+
+							<br />
+
+							// Pin the button is attached to<br />
+
+							int buttonPin1 = 11;<br />
+
+							int buttonPin2 = 10;<br />
+
+							<br />
+
+							// Variable to store the button's state <br />
+
+							int buttonState1 = 0;<br />
+
+							int buttonState2 = 0;<br />
+
+							<br />
+
+							void setup()<br />
+
+							{<br />
+
+							    <span class="tab" />// Set the led pin as an OUTPUT<br />
+
+							    <span class="tab" />pinMode(led1, OUTPUT);<br />
+
+							    <span class="tab" />//Set the button as INPUT<br />
+
+							    <span class="tab" />pinMode(buttonPin1, INPUT_PULLUP);<br />
+
+							    <span class="tab" />// Set the led pin as an OUTPUT<br />
+
+							    <span class="tab" />pinMode(led2, OUTPUT);<br />
+
+							    <span class="tab" />//Set the button as INPUT<br />
+
+							    <span class="tab" />pinMode(buttonPin2, INPUT_PULLUP);<br />
+
+							    <span class="tab" />// Initialize Serial, set the baud rate to 9600.<br />
+
+							    <span class="tab" />Serial.begin(9600);<br />
+
+							}<br />
+
+							<br />
+
+							void loop()<br />
+
+							{<br />
+
+							  <span class="tab" />buttonState1 = digitalRead(buttonPin1);<br />
+
+							  <span class="tab" />// Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.print("buttonState is:");<br />
+
+							    <span class="tab2" />Serial.println(buttonState1);<br />
+
+							  <span class="tab" />// Print the buttonState<br />
+
+							  <span class="tab" />if (buttonState1 == LOW) {<br />
+
+							    <span class="tab2" />digitalWrite(led1,HIGH);<br />
+
+							    <span class="tab2" />//Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.println("Button is PRESSED");<br />
+
+							  <span class="tab" />} else if (buttonState1 == LOW) {<br />
+
+							    <span class="tab2" />digitalWrite(led1,HIGH);<br />
+
+							    <span class="tab2" />//Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.println("Button is PRESSED");<br />
+
+							  <span class="tab" />} else {<br />
+
+							    <span class="tab2" />digitalWrite(led1,LOW);<br />
+
+							    <span class="tab2" />//Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.println("Button is NOT PRESSED");<br />
+
+							  <span class="tab" />}<br />
+
+							  <br />
+							  
+							  <span class="tab" />buttonState2 = digitalRead(buttonPin2);<br />
+
+							  <span class="tab" />// Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.print("buttonState is:");<br />
+
+							    <span class="tab2" />Serial.println(buttonState2);<br />
+
+							  <span class="tab" />// Print the buttonState<br />
+
+							  <span class="tab" />if (buttonState2 == LOW) {<br />
+
+							    <span class="tab2" />digitalWrite(led2,HIGH);<br />
+
+							    <span class="tab2" />//Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.println("Button is PRESSED");<br />
+
+							  <span class="tab" />} else if (buttonState2 == LOW) {<br />
+
+							    <span class="tab2" />digitalWrite(led2,HIGH);<br />
+
+							    <span class="tab2" />//Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.println("Button is PRESSED");<br />
+
+							  <span class="tab" />} else {<br />
+
+							    <span class="tab2" />digitalWrite(led2,LOW);<br />
+
+							    <span class="tab2" />//Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.println("Button is NOT PRESSED");<br />
+
+							  <span class="tab" />}<br />
+
+							}
+						</p>
+					</div>
+
+					<video width="320" height="240" controls>
+					  <source src="vid/dag43.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+
+					<p>
+						Hierna moesten we alleen nog een derde button toevoegen. Deze button moest ervoor gaan zorgen dat beide LEDs gaan branden als je de button indrukt. Ook hierbij werkte mijn code van gisteren niet, dus moest ik hem herschrijven met button states. Uiteindelijk is het me gedeeltelijk gelukt. De LEDs doen namelijk wat ze moeten doen bij elke button, alleen knipperen ze. Ik heb de code een paar keer helemaal omgegooid, maar we konden er niet achter komen waar dit probleem aan lag. Toen hebben we maar besloten om het zo te laten. We denken namelijk dat het niet erg gaat zijn, omdat we gebruik gaan maken van trilsensoren. Het valt dan waarschijnlijk minder op dan bij de LEDs. Als we er later achter komen dat het toch erg storend is bij de trilsensoren, dan gaan we dit probleem nog proberen op te lossen. De code die gedeeltelijk werkte en het resultaat daarvan, is hieronder te zien.
+					</p>
+
+					<div class="geelvak">
+						<p>
+							// Pin the led is attached to<br />
+
+							int led1 = 5;<br />
+
+							int led2 = 6;<br />
+
+							<br />
+
+							// Pin the button is attached to<br />
+
+							int buttonPin1 = 11;<br />
+
+							int buttonPin2 = 10;<br />
+
+							int buttonPin3 = 9;<br />
+
+							<br />
+
+							// Variable to store the button's state <br />
+
+							int buttonState1 = 0;<br />
+
+							int buttonState2 = 0;<br />
+
+							int buttonState3 = 0;<br />
+
+							<br />
+
+							void setup()<br />
+
+							{<br />
+
+							    <span class="tab" />// Set the led pin as an OUTPUT<br />
+
+							    <span class="tab" />pinMode(led1, OUTPUT);<br />
+
+							    <span class="tab" />//Set the button as INPUT<br />
+
+							    <span class="tab" />pinMode(buttonPin1, INPUT_PULLUP);<br />
+
+							    <span class="tab" />// Set the led pin as an OUTPUT<br />
+
+							    <span class="tab" />pinMode(led2, OUTPUT);<br />
+
+							    <span class="tab" />//Set the button as INPUT<br />
+
+							    <span class="tab" />pinMode(buttonPin2, INPUT_PULLUP);<br />
+
+							    <span class="tab" />//Set the button as INPUT<br />
+
+							    <span class="tab" />pinMode(buttonPin3, INPUT_PULLUP);<br />
+
+							    <span class="tab" />// Initialize Serial, set the baud rate to 9600.<br />
+
+							    <span class="tab" />Serial.begin(9600);<br />
+
+							}<br />
+
+							<br />
+
+							void loop()<br />
+
+							{<br />
+
+							  <span class="tab" />buttonState1 = digitalRead(buttonPin1);<br />
+
+							  <span class="tab" />// Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.print("buttonState is:");<br />
+
+							    <span class="tab2" />Serial.println(buttonState1);<br />
+
+							  <span class="tab" />// Print the buttonState<br />
+
+							  <span class="tab" />if (buttonState1 == LOW) {<br />
+
+							    <span class="tab2" />digitalWrite(led1,HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(led2,LOW);<br />
+
+							    <span class="tab2" />//Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.println("Button is PRESSED");<br />
+
+							  <span class="tab" />} else if (buttonState1 == HIGH) {<br />
+
+							    <span class="tab2" />digitalWrite(led1,LOW);<br />
+
+							    <span class="tab2" />digitalWrite(led2,HIGH);<br />
+
+							    <span class="tab2" />//Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.println("Button is PRESSED");<br />
+
+							  <span class="tab" />} else {<br />
+
+							     <span class="tab2" />digitalWrite(led1,LOW);<br />
+
+							     <span class="tab2" />digitalWrite(led2,HIGH);<br />
+
+							    <span class="tab2" />//Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.println("Button is NOT PRESSED");<br />
+
+							  <span class="tab" />}<br />
+
+							  <br />
+							  
+							  <span class="tab" />buttonState2 = digitalRead(buttonPin2);<br />
+
+							  <span class="tab" />// Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.print("buttonState is:");<br />
+
+							    <span class="tab2" />Serial.println(buttonState2);<br />
+
+							  <span class="tab" />// Print the buttonState<br />
+
+							  <span class="tab" />if (buttonState2 == LOW) {<br />
+
+							    <span class="tab2" />digitalWrite(led1,LOW);<br />
+
+							    <span class="tab2" />digitalWrite(led2,HIGH);<br />
+
+							    <span class="tab2" />//Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.println("Button is PRESSED");<br />
+
+							  <span class="tab" />} else if (buttonState2 == HIGH) {<br />
+
+							    <span class="tab2" />digitalWrite(led1,HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(led2,LOW);<br />
+
+							    <span class="tab2" />//Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.println("Button is PRESSED");<br />
+
+							  <span class="tab" />} else {<br />
+
+							    <span class="tab2" />digitalWrite(led1,HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(led2,LOW);<br />
+
+							    <span class="tab2" />//Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.println("Button is NOT PRESSED");<br />
+
+							  <span class="tab" />}<br />
+
+							  <br />
+
+							  <span class="tab" />buttonState3 = digitalRead(buttonPin3);<br />
+
+							  <span class="tab" />// Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.print("buttonState is:");<br />
+
+							    <span class="tab2" />Serial.println(buttonState3);<br />
+
+							  <span class="tab" />// Print the buttonState<br />
+
+							  <span class="tab" />if (buttonState3 == LOW) {<br />
+
+							    <span class="tab2" />digitalWrite(led1,HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(led2,HIGH);<br />
+
+							    <span class="tab2" />//Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.println("Button is PRESSED");<br />
+
+							  <span class="tab" />} else if (buttonState3 == HIGH) {<br />
+
+							    <span class="tab2" />digitalWrite(led1,LOW);<br />
+
+							    <span class="tab2" />digitalWrite(led2,LOW);<br />
+
+							    <span class="tab2" />//Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.println("Button is PRESSED");<br />
+
+							  <span class="tab" />} else {<br />
+
+							     <span class="tab2" />digitalWrite(led1,LOW);<br />
+
+							     <span class="tab2" />digitalWrite(led2,LOW);<br />
+
+							    <span class="tab2" />//Display button press in Serial Monitor<br />
+
+							    <span class="tab2" />Serial.println("Button is NOT PRESSED");<br />
+
+							  <span class="tab" />}<br />
+
+							}
+						</p>
+					</div>
+
+					<video width="320" height="240" controls>
+					  <source src="vid/dag44.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+
+					<p>
 						Toen heb ik met een ander groepslid de croco kabels vervangen door normale kabels. Deze kabels nemen namelijk minder ruimte in en zitten beter vast.
-						<br />
-						<br />
+					</p>
+
+					<div class="center">
+					  	<picture class="plaatje200">
+					  		<source media="(min-width: 0px)" srcset="img/dag43.jpg">
+							<img src="img/dag43.jpg" alt="Kabels vervangen">
+					  	</picture>
+				  	</div>
+
+					<p class="geenonderkant">
 						Ik heb daarnaast nog wat gefilmd voor het uiteindelijke filmpje.
 						<br />
 						<br />
 						De hele dag door hebben we ook met zijn allen nagedacht over de expo. We hebben wat nieuwe dingen bedacht die ons leuk lijken om op de expo te doen. De dingen die we opgeschreven hebben, zijn:
-						Put tape on the floor in the form of a course
-						Blindfold the person that is being guided
-						Give the guide the controls over the blinded person
-						Keep a scoreboard of the completion times
-						Everytime they walk out of the lines they get 10 second extratime
+					</p>
+
+					<div class="tabje">
+						<p>
+							Put tape on the floor in the form of a course<br />
+							Blindfold the person that is being guided<br />
+							Give the guide the controls over the blinded person<br />
+							Keep a scoreboard of the completion times<br />
+							Everytime they walk out of the lines they get 10 second extratime<br />
+						</p>
+			  		</div>
+
+			  		<p>
+			  			Daarna hebben we de dag afgesloten met het hele groepje.
 			  		</p>
+
+			  		<div class="center">
+					  	<picture class="plaatje300">
+					  		<source media="(min-width: 0px)" srcset="img/dag44.jpg">
+							<img src="img/dag44.jpg" alt="Scrum bord">
+					  	</picture>
+				  	</div>
 			  	</div>
 		  	</main>
+
+		  	<div class="overzicht">
+		  		<a href="labweeks.html" class="overzicht">&lt; Terug naar overzicht Lab Weeks</a>
+		  	</div>
+
+		  	<a href="dag3.html">
+			  	<div class="vorigedag">
+			  		<p class="kleinetitel">dag 3</p>
+			  	</div>
+			</a>
+
+			<a href="dag3.html">
+				<div class="linkerpijl">
+					<img src="img/linkerpijltje.png" class="arrowleft">
+				</div>
+			</a>
+
+		  	<a href="dag5.html">
+			  	<div class="volgendedag">
+			  		<p class="kleinetitel">dag 5</p>
+			  	</div>
+			</a>
+
+			<a href="dag5.html">
+				<div class="rechterpijl">
+					<img src="img/rechterpijltje.png" class="arrowright">
+				</div>
+			</a>
 		  	
 		  	<footer class="centreer">
 			  	<div class="lijnfooter"></div>

@@ -20,6 +20,10 @@ p.titel {
   margin-bottom: 2px;
 }
 
+p.dagtitel {
+  margin-top: 40px;
+}
+
 p.kleinetitel {
   font-family: 'Staatliches', cursive;
   font-size: 25px;
@@ -59,8 +63,28 @@ p.hr {
   color: #fff7a0;
 }
 
+p.geenonderkant {
+  margin-bottom: 0;
+}
+
 a {
   text-decoration: none;
+}
+
+a.overzicht {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: white;
+}
+
+a.overzicht:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tabje p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 footer p {
@@ -131,6 +155,11 @@ div .plaatje {
   margin: 0;
 }
 
+.plaatje150 img {
+  height: 150px;
+  margin: 0;
+}
+
 .tumbnail img {
   width: 100%;
   margin: 0;
@@ -150,6 +179,75 @@ video {
   width: 100%;
   height: 300px;
   margin-bottom: 20px;
+}
+
+.overzicht {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  width: 220px;
+}
+
+.volgendedag {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding-right: 25px;
+  background-color: #fff7a0;
+  border-top-left-radius: 20px;
+}
+
+.rechterpijl {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-right: 10px;
+}
+
+.arrowright {
+  width: 12px;
+  height: 18px;
+  vertical-align: middle;
+  float: left;
+  z-index: 0;
+  margin-left: 88px;
+  margin-top: -27px;
+}
+
+.volgendedag:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.vorigedag {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding-left: 25px;
+  background-color: #fff7a0;
+  border-top-right-radius: 20px;
+}
+
+.linkerpijl {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin-left: 10px;
+}
+
+.arrowleft {
+  width: 12px;
+  height: 18px;
+  vertical-align: middle;
+  float: left;
+  z-index: 0;
+  margin-right: 88px;
+  margin-top: -27px;
+}
+
+.vorigedag:hover {
+  background-color: white;
+  cursor: pointer;
 }
 
 .lijn {
@@ -180,6 +278,14 @@ video {
   text-align: center;
 }
 
+.tabje {
+  margin-left: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .tab {
   margin-left: 1em;
 }
@@ -190,6 +296,10 @@ video {
 
 .tab3 {
   margin-left: 3em;
+}
+
+.tab4 {
+  margin-left: 4em;
 }
 
 .blauw {
@@ -423,6 +533,11 @@ ul.geenuitklap {
     height: 200px;
     margin: 0;
   }
+
+  .plaatje150 img {
+    height: 100px;
+    margin: 0;
+  }
 }
 
 @media only screen and (min-width: 500px) and (max-width: 799px){
@@ -446,6 +561,11 @@ ul.geenuitklap {
 
   .plaatje300 img {
     height: 200px;
+    margin: 0;
+  }
+
+  .plaatje150 img {
+    height: 120px;
     margin: 0;
   }
 }

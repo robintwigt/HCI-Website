@@ -59,53 +59,265 @@
 	  	</div>
 
 	  	<picture class="grid-item foto">
-			<source media="(max-width: 499px)" srcset="img/index_4.jpg">
-			<source media="(min-width: 500px) and (max-width: 799px)" srcset="img/index_3.jpg">
-			<source media="(min-width: 800px) and (max-width: 1199px)" srcset="img/index_2.jpg">
-			<source media="(min-width: 1200px)" srcset="img/index_1.jpg">
-			<img src="img/index_3.jpg" alt="Achtergrond foto">
+			<source media="(max-width: 499px)" srcset="img/dag2_4.jpg">
+			<source media="(min-width: 500px) and (max-width: 799px)" srcset="img/dag2_3.jpg">
+			<source media="(min-width: 800px) and (max-width: 1199px)" srcset="img/dag2_2.jpg">
+			<source media="(min-width: 1200px)" srcset="img/dag2_1.jpg">
+			<img src="img/dag2_3.jpg" alt="Achtergrond foto">
 		</picture>
 
 		<div class="website">
 		  	<main class="content">
 		  		<div class="intro">
-			  		<p class="titel">Dag 2 - dinsdag 4 juni</p>
+			  		<p class="titel dagtitel">Dag 2 - dinsdag 4 juni</p>
 			  		<p>
-			  			We zijn de dag begonnen met het testen van verschillende sensoren met Arduino. We hebben een aantal van de sensoren verdeeld over onze groepsleden. Ik ben gaan werken met de temperatuursensor. Er waren 3 verschillende temperatuursensoren: ‘Temp’, ‘Analog temp’ en ‘Digital temp’.
+
+			  			We zijn de dag begonnen met een korte intro van de docent. Na dit praatje kon de daily standup van start gaan. Iedereen vertelde in het kort wat diegene gister gedaan had. Vervolgens gingen we bedenken wat er vandaag allemaal gedaan kon worden. Deze taken schreven we op post-its en plakten we onder het kopje 'to do'.
+			  		</p>
+
+			  		<div class="center">
+					  	<picture class="plaatje300">
+					  		<source media="(min-width: 0px)" srcset="img/dag21.jpg">
+							<img src="img/dag21.jpg" alt="Scrum bord">
+					  	</picture>
+				  	</div>
+
+			  		<p>
+			  			Daarna zijn we gestart met het testen van verschillende sensoren met Arduino. We hebben een aantal van de sensoren verdeeld over onze groepsleden. De sensoren die we wilden testen waren de: afstandssensor, geluidssensor, temperatuursensor, versnellingsmeter en lichtsensor. Ik ben gaan werken met de temperatuursensor. Er waren 3 verschillende temperatuursensoren: ‘Temp’, ‘Analog temp’ en ‘Digital temp’.
 			  			<br />
 			  			<br />
 						Bij alle 3 de sensoren kreeg ik wel waarden te zien, alleen was het niet de waarde die ik wilde. De waarde die ik wilde was namelijk graden celsius. Ik kon er niet achter komen welke waarden de sensoren gaven. Ik dacht eerst aan Fahrenheit, alleen toen ik dit omrekende in Arduino kwamen er getallen uit die ook niet helemaal leken te kloppen. Het zou dan namelijk 26 graden zijn en dat was het niet op dat moment. Dit kan echter ook liggen aan de nauwkeurigheid van de sensor. 
 						<br />
-			  			<br />
-						Om half 1 begon de presentatie van Vincent. Lindeboom.
+						<br />
+						De code die ik gebruikt het voor de temperatuursensor is hieronder te zien. De 3 regels die ik in commentaar heb gezet, waren probeersels van berekeningen om de juiste waarde eruit te krijgen. De waarden die daaruit kwamen waren dus niet helemaal realistisch.
+					</p>
+
+					<div class="geelvak">
+						<p>
+							float sensorValue = 0.0;<br />
+
+							int sensorPin = A0;<br />
+
+							<br />
+
+							void setup() {<br />
+
+							  <span class="tab" />pinMode(sensorPin, INPUT);<br />
+
+							  <span class="tab" />Serial.begin(9600);<br />
+
+							}<br />
+
+							<br />
+
+							void loop() {<br />
+
+							  <span class="tab" />sensorValue = analogRead(sensorPin);<br />
+
+							  <span class="tab" />//sensorValue = ((sensorValue - 32) / 1.8);<br />
+
+							  <span class="tab" />//sensorValue = sensorValue * (5.0 / 1023.0);<br />
+
+							  <span class="tab" />//sensorValue = sensorValue * 0.485621;<br />
+
+							  <span class="tab" />Serial.print("Temperature is: ");<br />
+
+							  <span class="tab" />Serial.println(sensorValue);<br />
+
+							  <span class="tab" />delay(1000);<br />
+
+							}
+						</p>
+					</div>
+
+					<div class="center">
+					  	<picture class="plaatje200">
+					  		<source media="(min-width: 0px)" srcset="img/dag22.jpg">
+							<img src="img/dag22.jpg" alt="Temperatuursensor">
+					  	</picture>
+				  	</div>
+
+					<p class="geenonderkant">
+						Om half 1 begon de presentatie van Vincent Lindeboom.
 						<br />
 			  			<br />
-						Presentatie:
-						Vincent Lindeboom
-						Next Empire
-						www.nextempire.net
-						www.radioradio.com
-						An experimental product/ experience studio
-						Vincent is van het bedrijf radio radio.
-						Hij legde een aantal van zijn projecten uit. Bijvoorbeeld:
-						‘Moord in artis’. Dit is een project dat ging om audio. Zag er erg leuk uit, vooral de trailer maakt me erg nieuwsgierig. Dit is iets waarvoor ik naar Artis zou gaan.
-						‘Stranger things II’. Is vooral erg leuk als je de serie kent, want dan herken je onderdelen. 
-						<br />
-			  			<br />
-						Na de presentatie zijn we met de hele groep nog even gaan brainstormen over het concept. We hebben besloten om het een beetje aan te passen. Bij het concept is het nu de bedoeling dat 2 mensen met elkaar gaan samenwerken door middel van een spel. Persoon 1 gaat lopen door een doolhof met een blinddoek om en 2 sensoren, 1 sensor op de linkerhand en 1 sensor op de rechterhand. Als de tweede persoon op een button klikt met een linkerpijl, dan gaat de sensor op de linkerhand trillen. Als de persoon op een button klikt met een rechterpijl, dan gaat de sensor sensor op de rechterhand trillen. Hiermee kan persoon 2 persoon 1 begeleiden door het doolhof.
+						De aantekeningen die ik gemaakt heb over de presentatie zijn:
+					</p>
+
+					<div class="tabje">
+						<p>
+							Vincent Lindeboom<br />
+							Next Empire<br />
+							www.nextempire.net<br />
+							www.radioradio.com<br />
+							An experimental product/ experience studio<br />
+							Vincent is van het bedrijf radio radio.<br />
+							Hij legde een aantal van zijn projecten uit. De projecten die mij aanspreken zijn:
+						</p>
+						<div class="tabje">
+							<p>
+								‘Moord in artis’. Dit is een project dat ging om audio. Zag er erg leuk uit, vooral de trailer maakt me erg nieuwsgierig. Dit is iets waarvoor ik naar Artis zou gaan.<br />
+								‘Stranger things II’. Is vooral erg leuk als je de serie kent, want dan herken je onderdelen.
+							</p>
+						</div> 
+					</div>
+
+					<div class="center">
+					  	<picture class="plaatje200">
+					  		<source media="(min-width: 0px)" srcset="img/dag23.jpg">
+							<img src="img/dag23.jpg" alt="Presentatie">
+					  	</picture>
+				  	</div>
+
+					<p>
+						Na de presentatie zijn we met de hele groep nog even gaan brainstormen over het concept. We hebben besloten om het een beetje aan te passen. Bij het concept is het nu de bedoeling dat 2 mensen met elkaar gaan samenwerken door middel van een spel. Persoon 1 gaat lopen door een doolhof met een blinddoek om en 2 sensoren, 1 sensor op de linkerhand en 1 sensor op de rechterhand. Als de tweede persoon op een button klikt met een linkerpijl, dan gaat de sensor op de linkerhand trillen. Als de persoon op een button klikt met een rechterpijl, dan gaat de sensor op de rechterhand trillen. Hiermee kan persoon 2 persoon 1 begeleiden door het doolhof.
 						<br />
 			  			<br />
 						Het concept hadden we helemaal uitgedacht. Daarom heb ik een snelle schets gemaakt van het concept. Hierdoor is het concept duidelijk gevisualiseerd en zullen er geen onduidelijkheden zijn over het concept .
-						<br />
-			  			<br />
+					</p>
+
+					<div class="center">
+					  	<picture class="plaatje200">
+					  		<source media="(min-width: 0px)" srcset="img/dag24.jpg">
+							<img src="img/dag24.jpg" alt="Schets concept">
+					  	</picture>
+				  	</div>
+
+					<p>
 						Voor ons concept hebben we een sensor nodig die kan trillen. Deze sensor was echter niet aanwezig, dus moesten we nog bestellen. We konden vandaag dus nog niet experimenteren met deze sensor. De code die we nodig gaan hebben kan wel alvast geschreven worden, alleen dan met een andere sensor in plaats van de sensor die kan trillen.
 						<br />
 			  			<br />
 						Ik heb een code geschreven in Arduino die werkt met 2 buttons en 2 LEDs. Als je de linkerbutton indrukt gaat de linker LED aan en als je de rechterbutton indrukt gaat de rechter LED aan. Deze code kunnen we later gaan toepassen bij de tril sensor. Dat gaat namelijk op dezelfde manier werken: als de linkerbutton ingedrukt wordt, gaat de linker sensor trillen en andersom. De code die ik heb geschreven is hieronder te lezen en het resultaat daarvan is daaronder te zien.
-
 			  		</p>
+
+			  		<div class="geelvak">
+				  		<p>
+				  			// constants won't change. They're used here to set pin numbers:<br />
+
+							const int buttonPin1 = 2;     // the number of the pushbutton pin<br />
+
+							const int buttonPin2 = 3;     // the number of the pushbutton pin<br />
+
+							const int ledPin1 =  13;      // the number of the LED pin<br />
+
+							const int ledPin2 =  12;      // the number of the LED pin<br />
+
+							<br />
+
+							void setup() {<br />
+
+							  <span class="tab" />// initialize the LED pin as an output:<br />
+
+							  <span class="tab" />pinMode(ledPin1, OUTPUT);<br />
+
+							  <span class="tab" />// initialize the LED pin as an output:<br />
+
+							  <span class="tab" />pinMode(ledPin2, OUTPUT);<br />
+
+							  <span class="tab" />// initialize the pushbutton pin as an input:<br />
+
+							  <span class="tab" />pinMode(buttonPin1, INPUT);<br />
+
+							  <span class="tab" />// initialize the pushbutton pin as an input:<br />
+
+							  <span class="tab" />pinMode(buttonPin2, INPUT);<br />
+
+							}<br />
+
+							<br />
+
+							void loop() {<br />
+
+							  <span class="tab" />// check if the pushbutton is pressed. If it is, the buttonState is HIGH:<br />
+
+							  <span class="tab" />if ((digitalRead(buttonPin1) == HIGH) && (digitalRead(buttonPin2) == HIGH)) {<br />
+
+							    <span class="tab2" />// turn LED on:<br />
+
+							    <span class="tab2" />digitalWrite(ledPin1, HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin2, HIGH);<br />
+
+							  <span class="tab" />}<br />
+
+							  <span class="tab" />else if (digitalRead(buttonPin1) == HIGH) {<br />
+
+							    <span class="tab2" />// turn LED on:<br />
+
+							    <span class="tab2" />digitalWrite(ledPin1, HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin2, LOW);<br />
+
+							  <span class="tab" />}<br />
+
+							  <span class="tab" />else if (digitalRead(buttonPin2) == HIGH) {<br />
+
+							    <span class="tab2" />// turn LED on:<br />
+
+							    <span class="tab2" />digitalWrite(ledPin1, LOW);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin2, HIGH);<br />
+
+							  <span class="tab" />}<br />
+
+							  <span class="tab" />else {<br />
+
+							    <span class="tab2" />// turn LED off:<br />
+
+							    <span class="tab2" />digitalWrite(ledPin1, LOW);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin2, LOW);<br />
+
+							  <span class="tab" />}<br />
+
+							}
+						</p>
+				  	</div>
+
+				  	<video width="320" height="240" controls>
+					  <source src="vid/dag21.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+
+					<p>
+						De dag werd weer afgesloten met een praatje van de docenten. Daarna hebben we de dag nog even doorgenomen met het hele groepje bij het scrum bord.
+
+			  		<div class="center">
+					  	<picture class="plaatje300">
+					  		<source media="(min-width: 0px)" srcset="img/dag29.jpg">
+							<img src="img/dag29.jpg" alt="Scrum bord">
+					  	</picture>
+				  	</div>
 			  	</div>
 		  	</main>
+
+		  	<div class="overzicht">
+		  		<a href="labweeks.html" class="overzicht">&lt; Terug naar overzicht Lab Weeks</a>
+		  	</div>
+
+		  	<a href="dag1.html">
+			  	<div class="vorigedag">
+			  		<p class="kleinetitel">dag 1</p>
+			  	</div>
+			</a>
+
+			<a href="dag1.html">
+				<div class="linkerpijl">
+					<img src="img/linkerpijltje.png" class="arrowleft">
+				</div>
+			</a>
+
+		  	<a href="dag3.html">
+			  	<div class="volgendedag">
+			  		<p class="kleinetitel">dag 3</p>
+			  	</div>
+			</a>
+
+			<a href="dag3.html">
+				<div class="rechterpijl">
+					<img src="img/rechterpijltje.png" class="arrowright">
+				</div>
+			</a>
 		  	
 			<footer class="centreer">
 			  	<div class="lijnfooter"></div>

@@ -59,58 +59,382 @@
 	  	</div>
 
 	  	<picture class="grid-item foto">
-			<source media="(max-width: 499px)" srcset="img/index_4.jpg">
-			<source media="(min-width: 500px) and (max-width: 799px)" srcset="img/index_3.jpg">
-			<source media="(min-width: 800px) and (max-width: 1199px)" srcset="img/index_2.jpg">
-			<source media="(min-width: 1200px)" srcset="img/index_1.jpg">
-			<img src="img/index_3.jpg" alt="Achtergrond foto">
+			<source media="(max-width: 499px)" srcset="img/dag3_4.jpg">
+			<source media="(min-width: 500px) and (max-width: 799px)" srcset="img/dag3_3.jpg">
+			<source media="(min-width: 800px) and (max-width: 1199px)" srcset="img/dag3_2.jpg">
+			<source media="(min-width: 1200px)" srcset="img/dag3_1.jpg">
+			<img src="img/dag3_3.jpg" alt="Achtergrond foto">
 		</picture>
 
 		<div class="website">
 		  	<main class="content">
 		  		<div class="intro">
-			  		<p class="titel">Dag 3 - woensdag 5 juni</p>
+			  		<p class="titel dagtitel">Dag 3 - woensdag 5 juni</p>
 			  		<p>
-			  			De dag begon met een presentatie van Joost. 
-						Presentatie:
-						Joost Broekens
-						Sociale robots: Robots die denken en voelen
-						<br />
-						<br />
-						Ik vond de presentatie niet erg interessant. Het ging namelijk vooral over het onderwerp ‘Artificial Creatures’.
-						<br />
-						<br />
-						Daarna zijn we gaan experimenteren met de Makey Makey. Het is handig als we weten hoe dit werkt, want misschien kunnen we het toepassen in ons concept. 
+			  			De dag begon met een presentatie van Joost. De presentatie ging over sociale robots: Robots die denken en voelen. Ik vond de presentatie niet erg relevant voor mij. Het ging namelijk vooral over het onderwerp ‘Artificial Creatures’.
+			  			<br />
+			  			<br />
+						Daarna was het weer tijd voor de daily standup. We hebben besproken wat er vandaag allemaal gedaan kan worden en zijn vervolgens gaan experimenteren met de Makey Makey. Het is handig als we weten hoe dit werkt, want misschien kunnen we het toepassen in ons concept. 
 						<br />
 						<br />
 						Na een korte brainstormsessie over ons concept, kwamen we erachter dat het handig is om ook gebruik te maken van een sensor die laat weten dat je naar voren moet lopen. Hiervoor moeten we dus een derde button toevoegen en een derde sensor. 
 						<br />
 						<br />
-						Ik heb de code geschreven die gebruik maakt van 3 buttons en 3 LEDs. Als je button 1 indrukt, gaat LED 1 branden en hetzelfde gebeurt bij 2 en 3. Hierdoor kunnen we dus gebruik maken van 3 sensoren die trillen. We hadden als idee om die 3 sensoren in een riem te doen. 1 sensor voor in de riem en 2 sensoren aan de zijkant van de riem. Dit leek ons echter toch niet zo’n goed plan, omdat we dachten dat je dat waarschijnlijk niet goed gaat voelen. De riem zit namelijk over allemaal kleren heen en bovendien is het waarschijnlijk dan ook nog eens erg moeilijk om te voelen van welke kant de trilling komt.
+						Ik heb de code geschreven die gebruik maakt van 3 buttons en 3 LEDs. Als je button 1 indrukt, gaat LED 1 branden en hetzelfde gebeurt bij 2 en 3. Hierdoor kunnen we dus gebruik maken van 3 sensoren die trillen. De code die ik heb geschreven is hieronder te lezen. De code had een stuk korter gekund, alleen ik wilde er ook voor zorgen dat als je meerdere buttons indrukt dat er dan ook meerdere LEDs gaan branden. Het resultaat is daaronder te zien in de vorm van een video.
+					</p>
+
+					<div class="geelvak">
+						<p>
+							// constants won't change. They're used here to set pin numbers:<br />
+
+							const int buttonPin1 = 1;     // the number of the pushbutton pin<br />
+
+							const int buttonPin2 = 2;     // the number of the pushbutton pin<br />
+
+							const int buttonPin3 = 3;     // the number of the pushbutton pin<br />
+
+							const int ledPin1 =  13;      // the number of the LED pin<br />
+
+							const int ledPin2 =  12;      // the number of the LED pin<br />
+
+							const int ledPin3 =  11;      // the number of the LED pin<br />
+
+							<br />
+
+							void setup() {<br />
+
+							  <span class="tab" />// initialize the LED pin as an output:<br />
+
+							  <span class="tab" />pinMode(ledPin1, OUTPUT);<br />
+
+							  <span class="tab" />// initialize the LED pin as an output:<br />
+
+							  <span class="tab" />pinMode(ledPin2, OUTPUT);<br />
+
+							  <span class="tab" />// initialize the LED pin as an output:<br />
+
+							  <span class="tab" />pinMode(ledPin3, OUTPUT);<br />
+
+							  <span class="tab" />// initialize the pushbutton pin as an input:<br />
+
+							  <span class="tab" />pinMode(buttonPin1, INPUT);<br />
+
+							  <span class="tab" />// initialize the pushbutton pin as an input:<br />
+
+							  <span class="tab" />pinMode(buttonPin2, INPUT);<br />
+
+							  <span class="tab" />// initialize the pushbutton pin as an input:<br />
+
+							  <span class="tab" />pinMode(buttonPin3, INPUT);<br />
+
+							}<br />
+
+							<br />
+
+							void loop() {<br />
+
+							  <span class="tab" />// check if the pushbutton is pressed. If it is, the buttonState is HIGH:<br />
+
+							  <span class="tab" />if ((digitalRead(buttonPin1) == HIGH) && (digitalRead(buttonPin2) == HIGH) && (digitalRead(buttonPin3) == HIGH)) {<br />
+
+							    <span class="tab2" />// turn LED on:<br />
+
+							    <span class="tab2" />digitalWrite(ledPin1, HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin2, HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin3, HIGH);<br />
+
+							  <span class="tab" />} <br />
+
+							  <span class="tab" />else if ((digitalRead(buttonPin1) == HIGH) && (digitalRead(buttonPin2) == HIGH) && (digitalRead(buttonPin3) == LOW)) {<br />
+
+							    <span class="tab2" />// turn LED on:<br />
+
+							    <span class="tab2" />digitalWrite(ledPin1, HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin2, HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin3, LOW);<br />
+
+							  <span class="tab" />} <br />
+
+							  <span class="tab" />else if ((digitalRead(buttonPin1) == HIGH) && (digitalRead(buttonPin2) == LOW) && (digitalRead(buttonPin3) == HIGH)) {<br />
+
+							    <span class="tab2" />// turn LED on:<br />
+
+							    <span class="tab2" />digitalWrite(ledPin1, HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin2, LOW);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin3, HIGH);<br />
+
+							  <span class="tab" />} <br />
+
+							  <span class="tab" />else if ((digitalRead(buttonPin1) == LOW) && (digitalRead(buttonPin2) == HIGH) && (digitalRead(buttonPin3) == HIGH)) {<br />
+
+							    <span class="tab2" />// turn LED on:<br />
+
+							    <span class="tab2" />digitalWrite(ledPin1, LOW);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin2, HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin3, HIGH);<br />
+
+							  <span class="tab" />} <br />
+
+							  <span class="tab" />else if (digitalRead(buttonPin1) == HIGH) {<br />
+
+							    <span class="tab2" />// turn LED on:<br />
+
+							    <span class="tab2" />digitalWrite(ledPin1, HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin2, LOW);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin3, LOW);<br />
+
+							  <span class="tab" />} <br />
+
+							  <span class="tab" />else if (digitalRead(buttonPin2) == HIGH) {<br />
+
+							    <span class="tab2" />// turn LED on:<br />
+
+							    <span class="tab2" />digitalWrite(ledPin1, LOW);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin2, HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin3, LOW);<br />
+
+							  <span class="tab" />} <br />
+
+							  <span class="tab" />else if (digitalRead(buttonPin3) == HIGH) {<br />
+
+							    <span class="tab2" />// turn LED on:<br />
+
+							    <span class="tab2" />digitalWrite(ledPin1, LOW);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin2, LOW);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin3, HIGH);<br />
+
+							  <span class="tab" />} <br />
+
+							  <span class="tab" />else {<br />
+
+							    <span class="tab2" />// turn LED off:<br />
+
+							    <span class="tab2" />digitalWrite(ledPin1, LOW);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin2, LOW);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin3, LOW);<br />
+
+							  <span class="tab" />}<br />
+
+							}
+						</p>
+					</div>
+
+					<video width="320" height="240" controls>
+					  <source src="vid/dag31.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+
+					<p>
+						We hadden als idee om die 3 sensoren in een riem te doen. 1 sensor aan de voorkant en 2 sensoren aan de zijkant van de riem. Dit leek ons echter toch niet zo’n goed plan, omdat we dachten dat je dat waarschijnlijk niet goed gaat voelen. De riem zit namelijk over allemaal kleren heen en bovendien zal het ook nog eens erg moeilijk zijn om te voelen van welke kant de trilling komt.
 						<br />
 						<br />
 						We hebben dus besloten om toch gebruik te maken van 2 sensoren. Het leek ons alleen wel handig om ook een signaal te bedenken om te laten weten dat er vooruit gelopen moet worden. Dit gaan we doen door allebei de sensoren te laten trillen. 
 						<br />
 						<br />
-						Voor dit concept moest de code dus aangepast worden. Er moet namelijk 1 LED weg en de derde button moet er voor zorgen dat allebei de LEDs gaan branden. De code heb ik aangepast, waardoor het nu wel werkt zoals het moet.
+						Voor dit concept moest de code dus aangepast worden. Er moet namelijk 1 LED weg en de derde button moet er voor zorgen dat allebei de LEDs gaan branden. De code heb ik aangepast, waardoor het nu wel werkt zoals het moet. Hieronder is de aangepaste code te zien en het resultaat daarvan.
+					</p>
+
+					<div class="geelvak">
+						<p>
+							// constants won't change. They're used here to set pin numbers:<br />
+
+							const int buttonPin1 = 1;     // the number of the pushbutton pin<br />
+
+							const int buttonPin2 = 2;     // the number of the pushbutton pin<br />
+
+							const int buttonPin3 = 3;     // the number of the pushbutton pin<br />
+
+							const int ledPin1 =  13;      // the number of the LED pin<br />
+
+							const int ledPin2 =  12;      // the number of the LED pin<br />
+
+							const int ledPin3 =  11;      // the number of the LED pin<br />
+
+							<br />
+
+							void setup() {<br />
+
+							  <span class="tab" />// initialize the LED pin as an output:<br />
+
+							  <span class="tab" />pinMode(ledPin1, OUTPUT);<br />
+
+							  <span class="tab" />// initialize the LED pin as an output:<br />
+
+							  <span class="tab" />pinMode(ledPin2, OUTPUT);<br />
+
+							  <span class="tab" />// initialize the LED pin as an output:<br />
+
+							  <span class="tab" />pinMode(ledPin3, OUTPUT);<br />
+
+							  <span class="tab" />// initialize the pushbutton pin as an input:<br />
+
+							  <span class="tab" />pinMode(buttonPin1, INPUT);<br />
+
+							  <span class="tab" />// initialize the pushbutton pin as an input:<br />
+
+							  <span class="tab" />pinMode(buttonPin2, INPUT);<br />
+
+							  <span class="tab" />// initialize the pushbutton pin as an input:<br />
+
+							  <span class="tab" />pinMode(buttonPin3, INPUT);<br />
+
+							}<br />
+
+							<br />
+
+							void loop() {<br />
+
+							  <span class="tab" />// check if the pushbutton is pressed. If it is, the buttonState is HIGH:<br />
+
+							  <span class="tab" />if (digitalRead(buttonPin1) == HIGH) {<br />
+
+							    <span class="tab2" />// turn LED on:<br />
+
+							    <span class="tab2" />digitalWrite(ledPin1, HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin2, LOW);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin3, LOW);<br />
+
+							  <span class="tab" />} <br />
+
+							  <span class="tab" />else if (digitalRead(buttonPin2) == HIGH) {<br />
+
+							    <span class="tab2" />// turn LED on:<br />
+
+							    <span class="tab2" />digitalWrite(ledPin1, LOW);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin2, HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin3, LOW);<br />
+
+							  <span class="tab" />} <br />
+
+							  <span class="tab" />else if (digitalRead(buttonPin3) == HIGH) {<br />
+
+							    <span class="tab2" />// turn LED on:<br />
+
+							    <span class="tab2" />digitalWrite(ledPin1, HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin2, HIGH);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin3, LOW);<br />
+
+							  <span class="tab" />}<br />
+
+							  <span class="tab" />else {<br />
+
+							    <span class="tab2" />// turn LED off:<br />
+
+							    <span class="tab2" />digitalWrite(ledPin1, LOW);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin2, LOW);<br />
+
+							    <span class="tab2" />digitalWrite(ledPin3, LOW);<br />
+
+							  <span class="tab" />}<br />
+
+							}
+						</p>
+					</div>
+
+					<video width="320" height="240" controls>
+					  <source src="vid/dag32.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+
+					<p>
+						Daarna heb ik de schets van het concept aangepast. Ik heb 2 verschillende opties geschetst. Op de eerste schets is een arcade box te zien. Dit is de eerste optie om de bandjes mee te besturen. De tweede optie is te zien op de schets daaronder. Dit is een armband met de drie knoppen. Ook hiermee zou je de twee bandjes kunnen aansturen. 
 						<br />
 						<br />
-						Daarna heb ik de schets van het concept aangepast. Ik heb 2 verschillende opties geschetst.
+						We weten nog niet voor welke besturing we gaan kiezen. De arcade box vinden we erg leuk, omdat het er dan echt als een spel uitziet. Een nadeel hiervan is dat we het dan draadloos moeten maken en we weten nog niet of dat gaat lukken. De armband vinden we erg leuk, omdat dit ook meteen een wearable is. Dit ziet er misschien iets minder spectaculair uit dan de arcade box, maar hierdoor hoeven we het niet draadloos te maken. Met deze armband kan je namelijk achter de persoon aanlopen.
+					</p>
+
+					<div class="center">
+					  	<picture class="plaatje200">
+					  		<source media="(min-width: 0px)" srcset="img/dag31.jpg">
+							<img src="img/dag31.jpg" alt="Schets">
+					  	</picture>
+				  	</div>
+
+				  	<div class="center">
+					  	<picture class="plaatje200">
+					  		<source media="(min-width: 0px)" srcset="img/dag32.jpg">
+							<img src="img/dag32.jpg" alt="Schets">
+					  	</picture>
+				  	</div>
+
+					<p>
+						De buttons van Arduino zijn erg klein en onhandig om te gebruiken. Vandaar dat we andere buttons willen gebruiken voor ons concept. We hebben besloten om arcade buttons te kopen, omdat die goed aansluiten bij het idee dat we nu in ons hoofd hebben.
 						<br />
-						<br />  
-						De buttons van Arduino zijn erg klein en onhandig om te gebruiken. Vandaar dat we andere buttons willen gebruiken voor ons concept. We hebben besloten om arcade buttons te kopen, omdat die goed aansluiten bij ons concept.
+						<br />
+						De sensoren die kunnen trillen waren inmiddels bezorgd en dus konden we deze uittesten. Ik heb de trilsensoren vervangen voor de LEDs in mijn Arduino bord. We hadden 2 trilsensoren, maar 1 van de 2 sensoren deed het helaas niet.  In de video hieronder is te zien dat de trilsensor werkt als er op de button gedrukt wordt.
+					</p>
+
+					<video width="320" height="240" controls>
+					  <source src="vid/dag33.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+
+					<p>
+						Uiteindelijk willen we ervoor kunnen zorgen dat de trilsensoren draadloos werken. Dit kan door middel van een Lilypad. We hebben dus wat informatie opgezocht over de Lilypad, omdat we er nog niet veel vanaf wisten. Toen kwamen we tot de conclusie dat we waarschijnlijk Lilypad trilsensoren nodig gaan hebben. Deze hebben we dan ook besteld.  Naast het informatie zoeken over de lilypad, zijn er ook een aantal dingen uitgeprobeerd. 
 						<br />
 						<br />
-						De sensoren die kunnen trillen waren inmiddels bezorgd en dus konden we deze uittesten. Ik heb de trilsensoren vervangen voor de LEDs in mijn Arduino bord. We hadden 2 trilsensoren, maar 1 van de 2 sensoren deed het helaas niet. 
-						<br />
-						<br />
-						Uiteindelijk willen we ervoor kunnen zorgen dat de trilsensoren draadloos werken. Dit kan door middel van een Lilypad. We hebben dus wat informatie opgezocht over de Lilypad, omdat we er nog niet veel vanaf wisten. Toen kwamen we tot de conclusie dat we waarschijnlijk Lilypad trilsensoren nodig gaan hebben. Deze hebben we dan ook besteld. 
-						<br />
-						<br />
-						Naast het informatie zoeken over de lilypad, zijn er ook een aantal dingen uitgeprobeerd. 
+						Aan het eind van de dag hebben we het scrum bord nog even bijgewerkt. De foto hiervan is hieronder te zien.
 			  		</p>
+
+			  		<div class="center">
+					  	<picture class="plaatje300">
+					  		<source media="(min-width: 0px)" srcset="img/dag33.jpg">
+							<img src="img/dag33.jpg" alt="Scrum bord">
+					  	</picture>
+				  	</div>
 			  	</div>
 		  	</main>
+
+		  	<div class="overzicht">
+		  		<a href="labweeks.html" class="overzicht">&lt; Terug naar overzicht Lab Weeks</a>
+		  	</div>
+
+		  	<a href="dag2.html">
+			  	<div class="vorigedag">
+			  		<p class="kleinetitel">dag 2</p>
+			  	</div>
+			</a>
+
+			<a href="dag2.html">
+				<div class="linkerpijl">
+					<img src="img/linkerpijltje.png" class="arrowleft">
+				</div>
+			</a>
+
+		  	<a href="dag4.html">
+			  	<div class="volgendedag">
+			  		<p class="kleinetitel">dag 4</p>
+			  	</div>
+			</a>
+
+			<a href="dag4.html">
+				<div class="rechterpijl">
+					<img src="img/rechterpijltje.png" class="arrowright">
+				</div>
+			</a>
 		  	
 		  	<footer class="centreer">
 			  	<div class="lijnfooter"></div>
